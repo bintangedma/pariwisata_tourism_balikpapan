@@ -1,55 +1,104 @@
+$fontWeb: 'Arial Rounded MT';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
 h1 {
-  font-size: 2.2em;
-  font-family: "Arial Rounded MT";
+    font-size: 2.2em;
+    font-family: $fontWeb;
 }
 
 h2 {
-  font-size: 1.3em;
-  font: "Arial Rounded MT";
-  text-align: center;
+    font-size: 1.3em;
+    font: $fontWeb;
+    text-align: center;
 }
-
+h4{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    color: #1170FF;
+	text-align: center;
+}
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0 4px;
-}
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 35%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  -webkit-box-flex: 25%;
-      -ms-flex: 25%;
-          flex: 25%;
-  max-width: 35%;
-  padding: 0 4px;
-}
+body { background-color: #F8FBFF; }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+.baris{
+	display: flex;
+	margin: 0 -10px;
+}
+.col{
+	flex-basis: calc(100% / 4);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.berita {
+  font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
+  background-color: #fff;
+  box-shadow: 0 10px 60px rgba(0,0,0,.1);
+  border-radius: 5px;
+  
+}
+.berita__thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.berita__body {
+  padding: 20px;
+}
+.berita__meta {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: #1170FF;
+}
+.berita__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align : left;
+  color: #FF1B1B;
+}
+.berita__content {
+  margin-top: 0;
+  line-height: 24px;
+  text-align : justify;
+  color: #676767;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
-  }
-}
-/*# sourceMappingURL=style.css.map */
