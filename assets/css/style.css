@@ -61,12 +61,6 @@ h2 {
   justify-content: center;
   
 }
-.kolom{
-  display: table-cell;
-  padding: 1em;
-  color: white;
-  width: 30%;
-}
 @media only screen and (max-width :600px){
   .kolom {
     padding: 10px;
