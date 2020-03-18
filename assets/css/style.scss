@@ -1,11 +1,13 @@
+$fontWeb: 'Arial Rounded MT';
+
 h1 {
     font-size: 2.2em;
-    font-family: 'Arial Rounded MT';
+    font-family: $fontWeb;
 }
 
 h2 {
     font-size: 1.3  em;
-    font: 'Arial Rounded MT';
+    font: $fontWeb;
     text-align: center;
 }
 
