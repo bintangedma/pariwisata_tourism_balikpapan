@@ -59,7 +59,7 @@ h2 {
   width: 100%;
 }
 .kolom{
-  display: table-cell;
+  display: -ms-flexbox;
   padding: 1em;
   color: white;
   width: 30%;
