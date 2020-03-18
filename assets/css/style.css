@@ -55,8 +55,11 @@ h2 {
 /*# sourceMappingURL=style.css.map */
 
 .berita {
-  display: -ms-flexbox;
+  display: flexbox;
   width: 100%;
+  height: 100%;
+  justify-content: center;
+  
 }
 .kolom{
   display: table-cell;
@@ -66,8 +69,9 @@ h2 {
 }
 @media only screen and (max-width :600px){
   .kolom {
-    display: block;
-    width: 100%;
+    padding: 10px;
+    flex: 1;
+    background: azure;
   }
 
   
