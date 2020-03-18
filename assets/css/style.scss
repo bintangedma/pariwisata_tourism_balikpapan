@@ -45,21 +45,23 @@ h2 {
       max-width: 100%;
     }
   }
-  
-
 
 .berita {
   display: flexbox;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  
 }
+.kolom1{
+  flex: 1;
+}
+.kolom2{
+  flex: 1;
+}
+.kolom3{
+  flex: 1;
+}
+
 @media only screen and (max-width :600px){
-  .kolom {
-    padding: 10px;
-    flex: 1;
-    background: azure;
+  .berita{
+    flex-direction: column;
   }
   
   
