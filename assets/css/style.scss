@@ -48,11 +48,11 @@ h2 {
   
 
 .berita {
-  display: table;
+  display: flexbox;
   width: 100%;
 }
 .kolom{
-  display: -ms-flexbox;
+  display: table-cell;
   padding: 1em;
   color: white;
   width: 30%;
