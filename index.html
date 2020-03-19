@@ -6,40 +6,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index2.css">
 
     <title>Website Pariwisata | Balikpapan</title>
-    <table> 
-        <!--LOGO + TEXT-->
-        <tr>
-        <td><a href="index.html">
-            <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" height="75" width="62"></a>
-        </td>
-        <td></td>
-        <td><h1>Website Pariwisata Balikpapan</h1></td>
-        </tr>   
-    </table>
-     
-    <!--NAVBAR KINDA-->
-    <table>
-        <td>
-            <a href="#HOME">HOME</a>
-        </td>
-        <td>
-            <a href="contact.html">CONTACT</a>
-        </td>
-        <td>
-            <a href="#HOME">ABOUT</a>
-        </td>
-    </table>
+    
 </head>
 <!--HEADER SECTION OVER-->
  
 <!--BODY SECTION-->
 <body>
-    
-    <!--IMAGE BALIKPAPAN-->
-    <img src="assets/image/dsc_0200.jpg" alt="Kota Balikpapan" 
-    height="590px" width="100%">
+  <header>
+    <div class="header-container">
+      <div id="logo">
+        <a href="index.html"
+          ><img src="./assets/image/logobalikpapan.png" alt="LOGO BALIKPAPAN"
+        /></a>
+        <div class="logo-text">
+          <h2>Website Pariwisata</h2>
+        </div>
+      </div>
+      <nav class="navbar">
+        <ul class="menu-container">
+          <li class="menu-item">
+            <a href="">home</a>
+            <ul class="submenu">
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="">contact</a>
+            <ul class="submenu">
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="">about</a>
+            <ul class="submenu">
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--IMAGE BALIKPAPAN-->
+  <section class="container">
+    <div class="hero-container">
+      <div class="hero">
+        <!-- <img src="assets/image/dsc_0200.jpg" alt="Kota Balikpapan" height="590px" width="100%"> -->
+        <h1>Balikpapan</h1>
+      </div>
+    </div>
 
     <hr>
     <center>
@@ -91,27 +114,120 @@
         </div>
 
     <!--BERITA SECTION-->
-    <hr>
-        <h2>What's New</h2>
-    <hr>
+    <div>
+        <h4>What's New</h4>
+    </div>
+		<div class="baris">
+			<div class="col">
+			<div class="berita">
+			<img src="assets/image/berita1.jpg" class="berita__thumbnail">
+			<div class="berita__body">
+				<div class="berita__meta">Traveling</div>
+				<h2 class="berita__title">Ekowisata Kampung Mangrove Kariangau, Objek Pariwisata Baru di Balikpapan, Berikut Wahananya</h2>
+				<p class="berita__content">Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar.
+Melihat potensi tersebut, warga Balikpapan membangun bersama dengan Pertamina membangun kawasan objek wisata, Kampung Mangrove Kariangau
+Menghabiskan dana hingga Rp 200 juta.
+</p>
+				<div class="berita__foot">
+					<time class="berita__time" datetime="2019-07-12">12/07/19</time>
+				</div>
+			</div>
+		</div>
+			</div>
+			<div class="col">
+			<div class="berita">
+			<img src="assets/image/berita2.jpg" class="berita__thumbnail">
+			<div class="berita__body">
+				<div class="berita__meta">Virus Corona</div>
+				<h2 class="berita__title">Antisipasi Penyebaran Covid-19, BI Balikpapan Kalimantan Timur Karantina Uang Rupiah 14 Hari</h2>
+				<p class="berita__content">Bank Indonesia memastikan uang rupiah yang didistribusikan ke masyarakat steril dan telah melalui proses khusus. Bank Indonesia melakukan karantina uang rupiah selama 14 hari dengan tujuan meminimalisir penyebaran virus covid-19 atau Virus Corona.
+Peredaran uang di masyarakat dinilai cukup mengkhawatirkan akibat perputarannya cepat dan berpindah dari tangan ke tangan</p>
+				<div class="berita__foot">
+					<time class="berita__time" datetime="2020-03-18">18/03/20</time>
+				</div>
+			</div>
+		</div>
+			</div>
+			<div class="col">
+			<div class="berita">
+			<img src="assets/image/berita3.jpg" class="berita__thumbnail">
+			<div class="berita__body">
+				<div class="berita__meta">Traveling</div>
+				<h2 class="berita__title">Kebun Raya Balikpapan Ada Flora ala Hutan Lindung Sungai Wain Kalimantan Timur, Setahun Sekali Saja</h2>
+				<p class="berita__content">Bagi anda yang sedang berada di Balikpapan, Kalimantan Timur, atau memang warga Balikpapan pastinya belum ada yang tahu kan?
 
+Ternyata kini ada penghuni baru di Kebun Raya Balikpapan loh.
 
+Ya, lokasi Kebun Raya Balikpapan di kilometer 15, Jalan Soekarno Hatta, Kelurahan Karang Joang, Kecamatan Balikpapan Utara, Kota Balikpapan, Kalimantan Timur.</p>
+				<div class="berita__foot">
+					<time class="berita__time" datetime="2019-10-14">14/10/19</time>
+				</div>
+			</div>
+		</div>
+			</div>
+			<div class="col">
+			<div class="berita">
+			<img src="assets/image/berita4.jpg" class="berita__thumbnail">
+			<div class="berita__body">
+				<div class="berita__meta">Traveling</div>
+				<h2 class="berita__title">Beredar Kabar Harga Kuliner di Wisata Pantai Manggar Balikpapan Mahal, Ini Jawaban Dinas Pariwisata</h2>
+				<p class="berita__content">Beredar kabar jika harga kuliner yang disajikan di tempat wisata Pantai Manggar Segara Sari, Kecamatan Balikpapan Timur, Kota Balikpapan, Provinsi Kalimantan Timur dianggap berat.
 
+Nilai harga bandrol yang berlaku terbilang tinggi, jika dibandingkan dengan di tempat lain.
+Menu makanan dan minuman yang dijual di Pantai Manggar sangat sangar harganya, hal inilah yang kemudian dikeluhkan beberapa pengunjung yang ungkapkan kepada Tribunkaltim.co.</p>
+				<div class="berita__foot">
+					<time class="berita__time" datetime="2019-11-22">22/11/19</time>
+				</div>
+			</div>
+		</div>
+			</div>
+		</div>
 </body>
 <!--BODY SECTION OVER-->
 
 <!--FOOTER-->
 <footer>
-    <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" 
-    height="100" width="80">
-    <p>Copyright &copy;
-     <span itemprop="copyrightYear">2020</span>
-     
-    </p>
-    <p><a href="#">About</a> -
-       <a href="#">Copyright</a> -
-       <a href="#">Contact</a>
-    </p>
+    <div class="content">    
+        <div class="box">
+            <h2>About us</h2>
+            <p>Tujuan dibuatnya situs web ini adalah untuk membantu orang orang untuk mencari tempat wisata saat ingin mengunjungi kota Balikpapan</p>
+            <p class="follow">
+                <a>
+                    <img width="24" class="lazyload loaded" src="https://cdn.dribbble.com/assets/icon-team-twitter-1fa6921d96b16e47f00ad0381ebbab59ba089c22b21f9bce783c9a4a077f40e9.png" data-src="https://cdn.dribbble.com/assets/icon-team-twitter-1fa6921d96b16e47f00ad0381ebbab59ba089c22b21f9bce783c9a4a077f40e9.png" data-was-processed="true">
+                </a>
+                <a>
+                    <img width="24" class="lazyload loaded" src="https://cdn.dribbble.com/assets/icon-team-facebook-4d63851997b88eb903858057327d93df9f950a55c5104a3a19206f2005682ea3.png" data-src="https://cdn.dribbble.com/assets/icon-team-facebook-4d63851997b88eb903858057327d93df9f950a55c5104a3a19206f2005682ea3.png" data-was-processed="true">
+                </a>
+                <a>
+                    <img width="24" class="lazyload loaded" src="https://cdn.dribbble.com/assets/icon-team-instagram-5dfdcd1478ea4a1c1e109b32adbd3878062aa1eb571da63ac379e0da1d2d5762.png" data-src="https://cdn.dribbble.com/assets/icon-team-instagram-5dfdcd1478ea4a1c1e109b32adbd3878062aa1eb571da63ac379e0da1d2d5762.png" data-was-processed="true">
+                </a>
+            </p>
+        </div>
+        <div class="box">
+            <h3>
+                <a>Website Pariwisata Balikpapan</a>
+            </h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Places</a></li>
+            </ul>
+            <p>
+                Institut Teknologi Kalimantan
+
+                Jl. Soekarno-Hatta Km. 15, Karang Joang, Balikpapan, Kalimantan Timur, 76127
+            </p>
+            
+            <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" height="80" width="65" >
+        </div>
+        <div class="box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    <div class="footer-bottom">
+            Powered by Kelompok 9 Web Design | 2020 &copy;
+    </div>  
 </footer>
 <!--FOOTER SECTION OVER-->
 
