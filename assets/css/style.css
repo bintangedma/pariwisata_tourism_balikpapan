@@ -249,7 +249,7 @@ header {
   font-size: 1.2rem;
 }
 
-> .navbar .menu-item a:hover {
+.navbar .menu-item a:hover {
   background-color: #00b090;
 }
 
@@ -293,5 +293,82 @@ header {
   visibility: visible;
   opacity: 1;
   display: block;
+}
+
+.content {
+  width: 100%;
+  height: 340px;
+  background: #454545;
+}
+
+.box {
+  float: left;
+  width: 33%;
+  height: 340px;
+  -webkit-box-sizing: border-box;
+  background: grey;
+  box-sizing: border-box;
+}
+
+.box h2 {
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+  font-size: 30px;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.box h3 {
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  line-height: 100%;
+  margin-left: 29px;
+}
+
+.box h3 a {
+  font-weight: 500;
+  color: white;
+}
+
+.box p {
+  font-family: "Haas Grot Text R Web","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #dad8d8;
+  text-align: left;
+  margin-left: 10px;
+  max-width: 70%;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  width: 100%;
+  height: 20px;
+  color: #adadad;
+  background: black;
+  text-align: center;
+  padding: 5px;
+}
+
+.box p.follow {
+  margin-top: 20px;
+}
+
+.box p.follow a {
+  margin: 0 10px 0 0;
+}
+
+.box div.extra-links {
+  float: left;
+  margin-right: 30px;
+}
+
+.box div.extra-links ul {
+  -webkit-column-count: 1;
+  column-count: 1;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
 }
 /*# sourceMappingURL=style.css.map */
