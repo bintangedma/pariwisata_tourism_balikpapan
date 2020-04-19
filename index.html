@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
 
     <title>Website Pariwisata | Balikpapan</title>
     
@@ -15,82 +16,302 @@
 <!--BODY SECTION-->
 <body>
   <header>
-    <div class="header-container">
-      <div id="logo">
-        <a href="index.html"
-          ><img src="./assets/image/logobalikpapan.png" alt="LOGO BALIKPAPAN"
-        /></a>
-        <div class="logo-text">
-          <h2>Website Pariwisata</h2>
+    <!--NAVBAR SECTION-->
+    <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+      
+      <div class="container">
+
+        <!-- SECTION LEFT NAVBAR -->
+        <div class="navbar-brand">
+
+          <!-- LOGO BALIKPAPAN -->
+          <a class="navbar-item" href="index.html">            
+              <img src="./assets/image/logobalikpapan.png" alt="LOGO BALIKPAPAN"/>
+          </a>
+
+          <!-- TITLE WEBSITE -->
+          <div class="navbar-item">
+            <h2 class="title is-5">Website Pariwisata</h2>
+          </div>
+      
+          <!-- BURGER NAV -->
+          <span class="navbar-burger" data-target="navbar-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </span>
+
+      </div>
+
+      <!-- SECTION RIGHT NAVBAR -->
+      <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-end">      
+            <a href="#home" class="navbar-item">Home</a>
+            <a href="#destinasi" class="navbar-item">Destinasi</a>
+            <a href="#gallery" class="navbar-item">Gallery</a>        
+            <a href="#" class="navbar-item">About us</a>
         </div>
       </div>
-      <nav class="navbar">
-        <ul class="menu-container">
-          <li class="menu-item">
-            <a href="">home</a>
-            <ul class="submenu">
-              <li><a href="">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="">contact</a>
-            <ul class="submenu">
-              <li><a href="">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="">about</a>
-            <ul class="submenu">
-              <li><a href="">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+
     </div>
+    <!-- CONTAINER END -->
+    </nav>
+
+    <!-- BURGER MENU NAVBAR JAVASCRIPT -->
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+
+     // Get all "navbar-burger" elements
+     var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+     // Check if there are any navbar burgers
+     if ($navbarBurgers.length > 0) {
+       // Add a click event on each of them
+       $navbarBurgers.forEach(function ($el) {
+       $el.addEventListener('click', function () {
+
+      // Get the target from the "data-target" attribute
+      var target = $el.dataset.target;
+      var $target = document.getElementById(target);
+
+      // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+      $el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+      });
+      });
+    }
+
+    });
+    </script>
+    <!-- NAVBAR SECTION OVER -->
   </header>
-  <!--IMAGE BALIKPAPAN-->
-  <section class="container">
-    <div class="hero-container">
-      <div class="hero">
-        <!-- <img src="assets/image/dsc_0200.jpg" alt="Kota Balikpapan" height="590px" width="100%"> -->
-        <h1>Balikpapan</h1>
+  <!-- HEADER SECTION OVER -->
+
+  <div id="home">
+  <section class="section hero">
+    <div class="hero-body">
+      <!-- FIRST COLUMN ON THE LEFT -->
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title is-size-1 has-text-weigh-bold">
+            KOTA BALIKPAPAN
+          </h1>
+        
+          <h1 class="subtitle is-4 has-margin-top-50 is-family-primary">
+            Website Pariwisata penyedia informasi tentang kawasan pariwisata yang ada di kota Balikpapan.
+          </h1>        
+        </div>
+      
+        <!-- SECOND COLUMN ON THE RIGHT -->         
+        <div class="column is-half">
+          <!-- ISOMETRIC IMAGE -->
+          <img src="assets/image/cityiso.png" alt="">
+        </div>
+
       </div>
-    </div>
-
-    <hr>
-    <center>
-        <h1>Balikpapan Kota Beriman</h1>
-    </center>
-    <hr>
-
-    <!--VIDEO YOUTUBE-->
-    <div align="center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/v441IXOTSUk" frameborder="0" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; 
-        picture-in-picture" allowfullscreen>
-        </iframe>
     </div>
     
+  </section>
+  </div>
+  <!-- HOME SECTION OVER -->
+
+  <hr>
+  <div class="columns is-centered">
+    <h1 class="title">
+      OUR VIDEO
+    </h1>
+  </div>
+  <!-- VIDEO SECTION -->
+  <section class="section hero">      
+    <div class="columns is-fill is-centered">
+      <!--VIDEO YOUTUBE-->
+      <iframe width="540" height="350" class="has-ratio" src="https://www.youtube.com/embed/v441IXOTSUk" frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+        picture-in-picture" allowfullscreen>
+        </iframe>     
+    </div>
+        
+         
+  </section>
+  <!-- VIDEO SECTION OVER -->
+
+  <div id="destinasi">
+  <hr>
+
+    <section class="section hero">
+      <div class="columns is-vcentered">
+
+        <div class="column is-half">
+          <h1 class="title is-primary">OUR DESTINATION</h1>
+          <h2 class="subtitle is-5  has-margin-top-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium architecto nesciunt hic accusamus vel.</h2>
+        </div>
+
+        <div class="column is-half">
+            <img src="assets/image/pooliso.png" alt="">                  
+        </div>        
+
+      </div>
+    </section>
+  
+    <section class="section hero">
+      <div class="columns">
+        <div class="column">
+
+          <!-- DESTINASI CARD COMPONENT -->
+
+          <!-- DESTINASI 1 -->
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="assets/image/bppgallery1.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Pantai Lamaru</p>
+                </div>
+              </div>
+                    
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
+                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESTINASI 2 -->
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="assets/image/bppgallery3.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Bumi Hijau</p>
+                </div>
+              </div>
+                    
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
+                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESTINASI 3 -->
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="assets/image/bppgallery4.jpeg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Hotel Berwarna</p>
+                </div>
+              </div>
+                    
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
+                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESTINASI 4 -->
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="assets/image/bppgallery5.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">E-Walk</p>
+                </div>
+              </div>
+                    
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
+                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESTINASI 5 -->
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="assets/image/berita4.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Pantai Manggar</p>
+                </div>
+              </div>
+                    
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
+                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <hr>
+  </div>
+  <!-- DESTINASI SECTION OVER -->
+
     <!--GALLERY SECTION-->
-    <hr>
-        <h2>GALLERY</h2>
-    <hr>
-        <div class="row">
+  <div id="gallery">
+    <div class="columns is-centered">
+    <h1 class="title">
+      OUR GALLERY
+    </h1>
+    </div>
+        <div class="columns is-1">
             <div class="column">
                 <img src="assets/image/bppgallery1.jpg">
                 <img src="assets/image/bppgallery2.jpg">
-                <img src="assets/image/bppgallery3.jpg">
+                <img src="assets/image/bppgallery3.jpg" width="100%">
                 <img src="assets/image/bppgallery4.jpeg">
                 <img src="assets/image/bppgallery5.jpg">
             </div>
             <div class="column">
-                <img src="assets/image/bppgallery3.jpg">
+                <img src="assets/image/bppgallery3.jpg" width="100%">
                 <img src="assets/image/bppgallery2.jpg">
                 <img src="assets/image/bppgallery1.jpg">
                 <img src="assets/image/bppgallery4.jpeg">
@@ -99,14 +320,16 @@
             <div class="column">
                 <img src="assets/image/bppgallery5.jpg">
                 <img src="assets/image/bppgallery2.jpg">
-                <img src="assets/image/bppgallery3.jpg">
+                <img src="assets/image/bppgallery3.jpg" width="100%">
                 <img src="assets/image/bppgallery4.jpeg">
                 <img src="assets/image/bppgallery1.jpg">
             </div>
         </div>
+  </div>
+  <!-- GALLERY SECTION OVER -->
 
-    <!--BERITA SECTION-->
-    <div>
+  <!--BERITA SECTION-->
+    <!-- <div>
         <h4>What's New</h4>
     </div>
 		<div class="baris">
@@ -173,7 +396,7 @@ Menu makanan dan minuman yang dijual di Pantai Manggar sangat sangar harganya, h
 			</div>
 		</div>
 			</div>
-		</div>
+		</div> -->
 </body>
 <!--BODY SECTION OVER-->
 
