@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#home > .container {
+  width: 100%;
+  height: auto;
+  padding: 5rem 1rem;
+}
+
+.video-bpp {
+  width: 100%;
+}
+
+.video-bpp figure {
+  width: 100%;
+}
+
+.video-bpp figure iframe {
+  width: 100%;
+  height: 30rem;
+}
+
+@media screen and (max-width: 768px) {
+  #video {
+    width: 100%;
+    height: auto;
+  }
+  .video-bpp figure iframe {
+    width: 38rem;
+  }
+}
+/*# sourceMappingURL=new_style.css.map */

@@ -303,7 +303,7 @@ header {
 
 .box {
   float: left;
-  width: 33%;
+  width: 33.33333333333%;
   height: 340px;
   -webkit-box-sizing: border-box;
   background: grey;
