@@ -20,7 +20,7 @@
 <body>
   <header>
     <!--NAVBAR SECTION-->
-    <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
 
       <div class="container">
 
@@ -34,7 +34,7 @@
 
           <!-- TITLE WEBSITE -->
           <div class="navbar-item">
-            <h2 class="title is-8">Pariwisata Balikpapan</h2>
+            <h2 class="subtitle">Pariwisata Balikpapan</h2>
           </div>
 
           <!-- BURGER NAV -->
@@ -58,13 +58,13 @@
             <a class="navbar-item">
               <div class="field has-addons">
                 <p href="" class="control">
-                  <input type="text" class="input" placeholder="Pencarian ...">
+                  <input type="text" class="input" placeholder="Find Something">
                 </p>
-                <p class="control">
-                  <button class="button">
-                    <i class="fa fa-search"></i>
+                <div class="control">
+                  <button class="button is-primary is-outline">
+                    Get's Started
                   </button>
-                </p>
+                </div>
               </div>
             </a>
           </div>
@@ -109,7 +109,7 @@
     <!-- FIRST COLUMN ON THE LEFT -->
 
     <div class="container">
-      <div class="columns is-1 is-vcentered">
+      <div class="columns is-gapless is-vcentered">
         <div class="column">
 
           <div class="columns">
@@ -120,7 +120,7 @@
             </div>
           </div>
 
-          <div class="columns">
+          <div class="columns is-gapless">
             <div class="column is-full">
               <h1 class="subtitle is-4">
                 Website Pariwisata penyedia informasi tentang kawasan pariwisata yang ada di kota Balikpapan.
@@ -133,13 +133,13 @@
         <!-- SECOND COLUMN ON THE RIGHT -->
         <div class="column is-half">
           <!-- ISOMETRIC IMAGE -->
-          <img src="assets/image/cityiso.png" alt="">
+          <img src="assets/image/cityiso.png" height="10%" alt="">
         </div>
       </div>
     </div>
 
     <!-- BANNER SECTION -->
-    <div class="columns is-gapless">
+    <div class="columns">
       <div class="column">
         <img class="is-hidden-mobile" src="assets/image/banner2.png" width="100%" alt="">
       </div>
@@ -154,35 +154,35 @@
 
   <!-- VIDEO SECTION -->
   <div id="video">
-    <section class="section hero is-s is-white">
-      <div class="columns is-vcentered is-4">
+    <section class="section hero">
+      <div class="container">
+      <div class="columns is-vcentered is-4">        
+        <div class="column is-half">
+          <h1 class="title is-primary">VIDEO KAMI</h1>
+          <h2 class="subtitle is-5">Dalam dunia pariwisata, visualisasi sangat dibutuhkan untuk mendapatkan sensasi keindahan sebuah kota ataupun daerah. Untuk itu, sebelum bepergian calon pariwisatawan dianjurkan untuk melihat suasana daerah pariwisata yang akan dikunjungi melewati media, terutama video. Dengan tujuan, akan mendapatkan gambaran visual yang tepat dan sesuai harapan. Keindahan alam Kota Balikpapan, terangkum dalam video dibawah ini.</h2>
+        </div>
         <div class="column is-half">
           <img src="assets/image/video.png" alt="">
         </div>
-        <div class="column is-half">
-          <h1 class="title is-primary">VIDEO KAMI</h1>
-          <h2 class="subtitle is-5  has-margin-top-50">Dalam dunia pariwisata, visualisasi sangat dibutuhkan untuk mendapatkan sensasi keindahan sebuah kota ataupun daerah. Untuk itu, sebelum bepergian calon pariwisatawan dianjurkan untuk melihat suasana daerah pariwisata yang akan dikunjungi melewati media, terutama video. Dengan tujuan, akan mendapatkan gambaran visual yang tepat dan sesuai harapan. Keindahan alam Kota Balikpapan, terangkum dalam video dibawah ini.</h2>
-        </div>
-
-        
-
       </div>
+    </div>
     </section>
 
   </div>
   <section class="section hero ">
     <div class="columns video-bpp is-fill is-centered is-mobile">
       <!-- VIDEO YOUTUBE -->
+      <div class="container">
       <figure class="image">
         <iframe class="has-ratio" src="https://www.youtube.com/embed/v441IXOTSUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
         picture-in-picture" allowfullscreen></iframe>
       </figure>
     </div>
+    </div>
   </section>
   <!-- VIDEO SECTION OVER -->
 
   <div id="destinasi">
-    <hr>
 
     <section class="section hero is-s is-primary is-bold">
       <div class="columns is-vcentered is-4">
@@ -382,7 +382,36 @@
     <section class="section hero">
       <div class="columns is-1">
         <div class="column">
-          <img src="assets/image/bppgallery1.jpg">
+          <div id="myModal" class="modal">            
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <p class="image is-4by3">
+                <img id="img01" src="assets/image/bppgallery1.jpg" alt="">
+              </p>
+            </div>
+            <span class="modal-close"></span>
+          </div>
+          <img src="assets/image/bppgallery1.jpg" id="myImg">
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("modal-close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+            </script>
           <img src="assets/image/bppgallery2.jpg">
           <img src="assets/image/bppgallery3.jpg" width="100%">
           <img src="assets/image/bppgallery4.jpeg">
@@ -434,7 +463,9 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
+                <a href="berita.html">
                 <img src="assets/image/berita1.jpg" alt="Placeholder image">
+                </a>
               </figure>
             </div>
             <div class="card-content">
@@ -460,7 +491,9 @@ Melihat potensi tersebut, warga Balikpapan membangun bersama dengan Pertamina me
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
+                <a href="berita.html">
                 <img src="assets/image/berita2.jpg" alt="Placeholder image">
+                </a>
               </figure>
             </div>
             <div class="card-content">
@@ -485,7 +518,9 @@ Melihat potensi tersebut, warga Balikpapan membangun bersama dengan Pertamina me
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
+                <a href="berita.html">
                 <img src="assets/image/berita3.jpg" alt="Placeholder image">
+                </a>
               </figure>
             </div>
             <div class="card-content">
@@ -512,7 +547,9 @@ Ternyata kini ada penghuni baru di Kebun Raya Balikpapan loh. <a>@Balikpapan</a>
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
+                <a href="berita.html">
                 <img src="assets/image/berita4.jpg" alt="Placeholder image">
+                </a>
               </figure>
             </div>
             <div class="card-content">
@@ -551,10 +588,9 @@ Nilai harga bandrol yang berlaku terbilang tinggi, jika dibandingkan dengan di t
         </ul>
       </nav>
     </div>
-   
-
   <hr>
   </div>
+  <!-- BERITA SECTION OVER -->
 </body>
 <!--BODY SECTION OVER-->
 
