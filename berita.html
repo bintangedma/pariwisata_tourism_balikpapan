@@ -6,6 +6,7 @@
     <title>Berita | Balikpapan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 </head>
 <body>
@@ -105,7 +106,7 @@
         <div class="container">
             <div class="columns is-full is-centered">           
                 <div class="column">
-                <p class="is-large">
+                <p class="is-large has-text-justified">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, aspernatur facere enim quibusdam, porro temporibus aliquam saepe amet incidunt consequuntur vel modi maiores cupiditate ad adipisci culpa iure debitis non unde, voluptate error assumenda. Debitis aut molestiae nihil quod? Quod, adipisci. Facere illo labore necessitatibus, sequi corporis nostrum amet recusandae nobis dicta alias eaque obcaecati, omnis nisi quidem dolorem mollitia, impedit aliquam unde corrupti aspernatur excepturi magnam. Nisi inventore quo, voluptas doloribus fugiat tenetur obcaecati, dolorum maiores, eligendi similique id!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod molestias deserunt natus reprehenderit, error dolores itaque voluptatum, mollitia, blanditiis repudiandae corrupti sit. Sit, earum. Natus at soluta mollitia atque aut cupiditate odit quod, tenetur dolorem dolores amet doloremque sint quae corporis ipsa, accusamus cumque? Ducimus ipsam dolores impedit rem rerum, veritatis voluptas quae dolore ad expedita minima explicabo ullam nemo obcaecati excepturi iure non. Tempora veritatis consequatur, repudiandae sint cumque tempore ad atque doloremque perspiciatis? Tenetur incidunt, voluptate aperiam corrupti, molestias aspernatur commodi impedit id at architecto suscipit vero odit maxime? Id excepturi magni ad vero ipsam suscipit illum molestiae?
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorum quod assumenda maiores facere blanditiis cumque necessitatibus harum voluptatum praesentium numquam velit, perferendis maxime tempore laudantium molestias voluptates nihil consequuntur beatae impedit recusandae repellendus! Odit doloremque itaque expedita ipsa ut quam cupiditate harum, natus repudiandae magni beatae, ex saepe voluptas ducimus perspiciatis atque a perferendis suscipit? Perferendis corrupti officia laudantium corporis blanditiis repudiandae ipsam, ex minus iusto magni asperiores soluta mollitia repellendus porro explicabo molestiae quas eaque libero fuga! Aut.
@@ -117,71 +118,47 @@
     </div>
 
     <div class="section">
-        <div class="container">
-            <article class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img src="assets/image/user.png">
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Barbara Middleton</strong>
-                      <br>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
-                      <br>
-                      <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-                    </p>
-                  </div>
-              
-                  <article class="media">
-                    <figure class="media-left">
-                      <p class="image is-48x48">
-                        <img src="assets/image/user.png">
-                      </p>
-                    </figure>
-                    <div class="media-content">
-                      <div class="content">
-                        <p>
-                          <strong>Sean Brown</strong>
-                          <br>
-                          Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
-                          <br>
-                          <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-                        </p>
-                      </div>
-              
-                      <article class="media">
-                        Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
-                      </article>
-              
-                      <article class="media">
-                        Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
-                      </article>
-                    </div>
-                  </article>
-              
-                  <article class="media">
-                    <figure class="media-left">
-                      <p class="image is-48x48">
-                        <img src="assets/image/user.png">
-                      </p>
-                    </figure>
-                    <div class="media-content">
-                      <div class="content">
-                        <p>
-                          <strong>Kayli Eunice </strong>
-                          <br>
-                          Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
-                          <br>
-                          <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </article>
+        <div class="container">            
+
+              <div id="newComment">
+                <div v-for="comment in items"> 
+                    <article class="media">
+                        <figure class="media-left">
+                            <p class="image is-64x64">
+                                <img src="assets/image/user.png">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>{{comment.user}}</strong>
+                                    <br>
+                                        {{comment.isi}}                            
+                                    <br>
+                                    <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+                                    </p>
+                                    <br>
+                            </div>
+                        </div>          
+                    </article>                                
+                </div>      
+            </div>
+        
+            <!-- VUE.JS FOR comment SECTION -->
+            <script>
+              new Vue({
+                el: '#newComment',
+                data: {
+                  items: [
+                    {user: "Solihin", isi: "Beritanya mantap gan lanjutkan..!"},
+                    {user: "Barbara Smith", isi: "Luhar Biasa wal"},
+                    {user: "Smith", isi: "Wew Gila Corona #stayAtHome "}
+                  ]
+                }
+              })
+            </script>
+
+
               <article class="media">
                 <figure class="media-left">
                   <p class="image is-64x64">
@@ -191,18 +168,18 @@
                 <div class="media-content">
                   <div class="field">
                     <p class="control">
-                      <textarea class="textarea" placeholder="Add a comment..."></textarea>
+                      <textarea class="textarea" id="commentNew" v-model="message" placeholder="Add a comment..."></textarea> 
                     </p>
                   </div>
                   <div class="field">
                     <p class="control">
-                      <button class="button is-primary">Post comment</button>
+                      <button class="button is-primary" id="postComment">Post comment</button>
                     </p>
                   </div>
                 </div>
               </article>
         </div>
-    </div>
+    </div>    
 
 </body>
 
