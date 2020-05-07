@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/new_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="assets/Javascript/vue.js"></script>
   <title>Website Pariwisata | Balikpapan</title>
 
 </head>
@@ -155,19 +156,22 @@
   <!-- VIDEO SECTION -->
   <div id="video">
     <section class="section hero">
-      <div class="container">
-      <div class="columns is-vcentered is-4">        
-        <div class="column is-half">
-          <h1 class="title is-primary">VIDEO KAMI</h1>
-          <h2 class="subtitle is-5">Dalam dunia pariwisata, visualisasi sangat dibutuhkan untuk mendapatkan sensasi keindahan sebuah kota ataupun daerah. Untuk itu, sebelum bepergian calon pariwisatawan dianjurkan untuk melihat suasana daerah pariwisata yang akan dikunjungi melewati media, terutama video. Dengan tujuan, akan mendapatkan gambaran visual yang tepat dan sesuai harapan. Keindahan alam Kota Balikpapan, terangkum dalam video dibawah ini.</h2>
-        </div>
-        <div class="column is-half">
-          <img src="assets/image/video.png" alt="">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+  
+            <div class="column is-half">
+              <h1 class="title is-primary">VIDEO KAMI</h1>
+              <h2 class="subtitle is-5  has-margin-top-50">Dalam dunia pariwisata, visualisasi sangat dibutuhkan untuk mendapatkan sensasi keindahan sebuah kota ataupun daerah. Untuk itu, sebelum bepergian calon pariwisatawan dianjurkan untuk melihat suasana daerah pariwisata yang akan dikunjungi melewati media, terutama video. Dengan tujuan, akan mendapatkan gambaran visual yang tepat dan sesuai harapan. Keindahan alam Kota Balikpapan, terangkum dalam video dibawah ini.</h2>
+            </div>
+  
+            <div class="column is-half">
+              <img src="assets/image/videosection.png" alt="">
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </section>
-
   </div>
   <section class="section hero ">
     <div class="columns video-bpp is-fill is-centered is-mobile">
@@ -183,170 +187,84 @@
   <!-- VIDEO SECTION OVER -->
 
   <div id="destinasi">
-
-    <section class="section hero is-s is-primary is-bold">
-      <div class="columns is-vcentered is-4">
-
-        <div class="column is-half">
-          <img src="assets/image/pooliso.png" alt="">
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+            
+            <div class="column is-half">
+              <img src="assets/image/destinationsection.png" alt="">
+            </div>
+            
+            <div class="column is-half">
+              <h1 class="title is-primary">DESTINASI KAMI</h1>
+              <h2 class="subtitle is-5  has-margin-top-50">Setiap kota, tak hanya memiliki satu daerah yang dapat dituju oleh pariwisatawan melainkan, terdapat banyak destinasi yang memanjakan mata pariwisatawan. Begitu juga dengan Kota Balikpapan yang memiliki beberapa destinasi yang dapat dikunjungi oleh pariwisatawan.</h2>
+            </div>
+          </div>
         </div>
-
-        <div class="column is-half">
-          <h1 class="title is-primary">DESTINASI KAMI</h1>
-          <h2 class="subtitle is-5  has-margin-top-50">Setiap kota, tak hanya memiliki satu daerah yang dapat dituju oleh pariwisatawan melainkan, terdapat banyak destinasi yang memanjakan mata pariwisatawan. Begitu juga dengan Kota Balikpapan yang memiliki beberapa destinasi yang dapat dikunjungi oleh pariwisatawan.</h2>
-        </div>
-
       </div>
     </section>
 
     <section class="section hero">
-      <div class="columns">
-        <div class="column">
-
-          <!-- DESTINASI CARD COMPONENT -->
-
-          <!-- DESTINASI 1 -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="assets/image/bppgallery1.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Pantai Lamaru</p>
-                  <img src="assets/image/rating.png" alt="rating">
-                </div>
+      <!-- DESTINASI CARD COMPONENT -->
+      <div id="destinasiCard">
+        <div class="columns">
+        
+        <div v-for="destinasi in destination">          
+          <div class="column">                  
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img v-bind:src="destinasi.thumbnail" alt="Placeholder image">
+                </figure>
               </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{destinasi.title}}</p>
+                    <img src="assets/image/rating.png" alt="rating">
+                  </div>
+                </div>
 
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
-                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <div class="content">
+                  {{destinasi.isiDestinasi}}
+                  <a>@Balikpapan</a>.
+                  <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+                  <br>
+                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- DESTINASI 2 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="assets/image/bppgallery3.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Bumi Hijau</p>
-                  <img src="assets/image/rating.png" alt="rating">
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
-                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
         </div>
-
-        <!-- DESTINASI 3 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="assets/image/bppgallery4.jpeg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Hotel Berwarna</p>
-                  <img src="assets/image/rating.png" alt="rating">
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
-                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DESTINASI 4 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="assets/image/bppgallery5.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">E-Walk</p>
-                  <img src="assets/image/rating.png" alt="rating">
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
-                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DESTINASI 5 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="assets/image/berita4.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Pantai Manggar</p>
-                  <img src="assets/image/rating.png" alt="rating">
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@Balikpapan</a>.
-                <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div>      
     </section>
+
+    <script>
+      new Vue({
+        el: '#destinasiCard',
+        data: {
+          destination: [
+            {thumbnail: "assets/image/bppgallery1.jpg", title: "Pantai Lamaru", isiDestinasi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+            {thumbnail: "assets/image/bppgallery3.jpg", title: "Bumi Hijau", isiDestinasi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+            {thumbnail: "assets/image/bppgallery4.jpeg", title: "Hotel Berwarna", isiDestinasi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+            {thumbnail: "assets/image/bppgallery5.jpg", title: "E-Walk", isiDestinasi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+            {thumbnail: "assets/image/berita4.jpg", title: "Pantai Manggar", isiDestinasi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."}
+          ]
+        }
+      })
+    </script>
+
     <div class="container">
       <nav class="pagination" role="navigation" aria-label="pagination">
         <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
         <a class="pagination-next">Next page</a>
         <ul class="pagination-list">
           <li>
-            <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+            <a class="pagination-link" aria-label="Page 1" aria-current="page">1</a>
           </li>
           <li>
             <a class="pagination-link" aria-label="Goto page 2">2</a>
@@ -365,18 +283,21 @@
 
   <!--GALLERY SECTION-->
   <div id="gallery">
-    <section class="section hero is-s is-primary is-bold">
-      <div class="columns is-vcentered is-4">
-
-        <div class="column is-half">
-          <h1 class="title is-primary">GALERI KAMI</h1>
-          <h2 class="subtitle is-5  has-margin-top-50">Foto tentang destinasi-destinasi yang akan dikunjungi, turut membantu men-visualisasikan suatu daerah pariwisata kepada pariwisatawan.</h2>
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+  
+            <div class="column is-half">
+              <h1 class="title is-primary">GALERI KAMI</h1>
+              <h2 class="subtitle is-5  has-margin-top-50">Foto tentang destinasi-destinasi yang akan dikunjungi, turut membantu men-visualisasikan suatu daerah pariwisata kepada pariwisatawan.</h2>
+            </div>
+  
+            <div class="column is-half">
+              <img src="assets/image/gallerysection.png" alt="">
+            </div>
+          </div>
         </div>
-
-        <div class="column is-half">
-          <img src="assets/image/isogallery.png" alt="">
-        </div>
-
       </div>
     </section>
     <section class="section hero">
@@ -438,146 +359,84 @@
 
     <!--BERITA SECTION-->
     <div id="news">
-      <section class="section hero is-s is-primary is-bold">
-              <div class="columns is-vcentered is-4">
-
-                <div class="column is-half">
-                  <img src="assets/image/isonews.png" alt="">
-                </div>
-
-                <div class="column is-half">
-                  <h1 class="title is-primary">BERITA KAMI</h1>
-                  <h2 class="subtitle is-5  has-margin-top-50">Pengetahuan tentang daerah yang akan dikunjungi sangat perlu. Sehingga, selain melihat video atau gambar, berita juga merupakan pilihan yang tepat untuk mencari tahu.</h2>
-                </div>
-
-              </div>
-            </section>
-    </div>
       <section class="section hero">
+        <div class="card">
+          <div class="container">
+            <div class="columns is-vcentered is-4">
+    
+              <div class="column is-half">
+                <img src="assets/image/newssection.png" alt="">
+              </div>
+
+              <div class="column is-half">
+                <h1 class="title is-primary">BERITA KAMI</h1>
+                <h2 class="subtitle is-5  has-margin-top-50">Pengetahuan tentang daerah yang akan dikunjungi sangat perlu. Sehingga, selain melihat video atau gambar, berita juga merupakan pilihan yang tepat untuk mencari tahu.</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="section hero">
+      <div id=beritaContent>
       <div class="columns">
-        <div class="column">
-
-          <!-- BERITA CARD COMPONENT -->
+          <!-- BERITA CARD COMPONENT -->        
           
-          <!-- BERITA 1 -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <a href="berita.html">
-                <img src="assets/image/berita1.jpg" alt="Placeholder image">
-                </a>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Ekowisata Kampung Mangrove Kariangau</p>
+            <div v-for="berita in news"> 
+              <div class="column">
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <a href="berita.html">
+                      <img v-bind:src="berita.thumbnail" alt="Placeholder image">
+                      </a>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">{{ berita.title }}</p>
+                      </div>
+                    </div>
+                          
+                    <div class="content">
+                      {{berita.isiBerita}}
+                      <a href="#">#NewsBalikpapan</a>
+                      <br>
+                      <time>{{berita.tanggal}}</time>
+                    </div>
+                  </div>
                 </div>
               </div>
-                    
-              <div class="content">
-                Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar.
-Melihat potensi tersebut, warga Balikpapan membangun bersama dengan Pertamina membangun kawasan objek wisata, Kampung Mangrove Kariangau. <a>@Balikpapan</a>.
-                <a href="#">#NewsBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2019-07-12">12 Jun 2019</time>
-              </div>
             </div>
-          </div>
+             
         </div>
+      </div> 
 
-        <!-- BERITA 2 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <a href="berita.html">
-                <img src="assets/image/berita2.jpg" alt="Placeholder image">
-                </a>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Antisipasi Penyebaran Covid-19, BI Balikpapan Kalimantan Timur Karantina Uang Rupiah 14 Hari</p>
-                </div>
-              </div>
-                    
-              <div class="content">
-               Bank Indonesia memastikan uang rupiah yang didistribusikan ke masyarakat steril dan telah melalui proses khusus. Bank Indonesia melakukan karantina uang rupiah selama 14 hari dengan tujuan meminimalisir penyebaran virus covid-19 atau Virus Corona. <a>@Balikpapan</a>.
-                <a href="#">#NewsBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2020-03-18">18 Mar 2020</time>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- SCRIPT VUE JS FOR NEWS SECTION -->
+  <script>
+    new Vue({
+      el: '#beritaContent',
+      data: {
+        news: [
+          {thumbnail: "assets/image/berita1.jpg", title: "Ekowisata Kampung Mangrove Kariangau", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
+          {thumbnail: "assets/image/berita2.jpg", title: "Ekowisata Kampung Mangrove Kariangau", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
+          {thumbnail: "assets/image/berita3.jpg", title: "Beritanya mantap gan lanjutkan..!", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
+          {thumbnail: "assets/image/berita4.jpg", title: "Beritanya mantap gan lanjutkan..!", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},          
+        ]
+      }
+    })
+  </script>
 
-        <!-- BERITA 3 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <a href="berita.html">
-                <img src="assets/image/berita3.jpg" alt="Placeholder image">
-                </a>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Kebun Raya Balikpapan Ada Flora ala Hutan Lindung Sungai Wain Kalimantan Timur</p>
-                </div>
-              </div>
-                    
-              <div class="content">
-                Bagi anda yang sedang berada di Balikpapan, Kalimantan Timur, atau memang warga Balikpapan pastinya belum ada yang tahu kan?
-
-Ternyata kini ada penghuni baru di Kebun Raya Balikpapan loh. <a>@Balikpapan</a>.
-                <a href="#">#NewsBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2019-10-14">14 Oct 2019</time>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BERITA 4 -->
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <a href="berita.html">
-                <img src="assets/image/berita4.jpg" alt="Placeholder image">
-                </a>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Beredar Kabar Harga Kuliner di Wisata Pantai Manggar Balikpapan Mahal, Ini Jawaban Dinas Pariwisata</p>
-                </div>
-              </div>
-                    
-              <div class="content">
-                Beredar kabar jika harga kuliner yang disajikan di tempat wisata Pantai Manggar Segara Sari, Kecamatan Balikpapan Timur, Kota Balikpapan, Provinsi Kalimantan Timur dianggap berat.
-
-Nilai harga bandrol yang berlaku terbilang tinggi, jika dibandingkan dengan di tempat lain. <a>@Balikpapan</a>.
-                <a href="#">#NewsBalikpapan</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2019-11-22">22 Nov 2019</time>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
+  </section>
     <div class="container">
       <nav class="pagination" role="navigation" aria-label="pagination">
         <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
         <a class="pagination-next">Next page</a>
         <ul class="pagination-list">
           <li>
-            <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+            <a class="pagination-link" aria-label="Page 1" aria-current="page">1</a>
           </li>
           <li>
             <a class="pagination-link" aria-label="Goto page 2">2</a>
