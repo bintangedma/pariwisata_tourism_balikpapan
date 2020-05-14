@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita | Balikpapan</title>
+    <title>Destinasi | Balikpapan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -82,26 +82,26 @@
     
     <div class="section"></div>
 
-    <!-- BERITA HEADLINE -->
+    <!-- DESTINASI HEADLINE -->
     <div class="section">
         <div class="contaier">
             <div class="columns is-full is-centered">
-                <h1 class="title">Ekowisata Kampung Mangrove Kariangau</h1>
+                <h1 class="title">Pantai Lamaru</h1>
             </div>            
         </div>        
     </div>
 
-    <!-- BERITA THUMBNAIL -->
+    <!-- DESTINASI THUMBNAIL -->
     <div class="section">
         <div class="container">
             <div class="columns is-full is-centered">            
-                <img src="assets/image/berita1.jpg" alt="">
+                <img src="assets/image/bppgallery1.jpg" alt="THUMBNAIL" height="1024" width="1024">
             </div>
         </div>
     </div>
 
 
-    <!-- BERITA CONTENT -->
+    <!-- DESTINASI CONTENT -->
     <div class="section">
         <div class="container">
             <div class="columns is-full is-centered">           
@@ -116,70 +116,39 @@
             </div>            
         </div>
     </div>
-
-    <div class="section">
-        <div class="container">            
-
-              <div id="newComment">
-                <div v-for="comment in items"> 
-                    <article class="media">
-                        <figure class="media-left">
-                            <p class="image is-64x64">
-                                <img src="assets/image/user.png">
-                            </p>
-                        </figure>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <strong>{{comment.user}}</strong>
-                                    <br>
-                                        {{comment.isi}}                            
-                                    <br>
-                                    <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-                                    </p>
-                                    <br>
+    <div id="destinasi">
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                   <article class="message is-primary">
+                     <div class="message-header">
+                     <p class="is-size-4">Rate</p>
+                     </div>
+                 </article>
+                  <section class="section hero">
+                       <div class="card">
+                         <div class="container">
+                            <div class="columns is-vcentered is-1">
+                                <div class="column is-half is-1-tablet is-1-desktop is-1-widescreen">
+                                    <img src="assets/image/user.png" alt="foto user" width="80" height="60">
+                                </div>
+                                <div class="column is-1-tablet is-1-desktop is-1-widescreen">
+                                    <p class="content is-left">
+                                        bambang
+                                        <br>
+                                        <img src="assets/image/rating.png" alt="star" width="80" height="60">
+                                    </p>                             
+                                </div>
+                                <div class="column is-half ">
+                                    <h1 class="title">Tempat ini sungguh bagus dan menarik</h1>
+                                </div>
                             </div>
-                        </div>          
-                    </article>                                
-                </div>      
-            </div>
-        
-            <!-- VUE.JS FOR comment SECTION -->
-            <script>
-              new Vue({
-                el: '#newComment',
-                data: {
-                  items: [
-                    {user: "Solihin", isi: "Beritanya mantap gan lanjutkan..!"},
-                    {user: "Barbara Smith", isi: "Luhar Biasa wal"},
-                    {user: "Smith", isi: "Wew Gila Corona #stayAtHome "}
-                  ]
-                }
-              })
-            </script>
-
-
-              <article class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img src="assets/image/user.png">
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="field">
-                    <p class="control">
-                      <textarea class="textarea" id="commentNew" v-model="message" placeholder="Add a comment..."></textarea> 
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <button class="button is-primary" id="postComment">Post comment</button>
-                    </p>
-                  </div>
-                </div>
-              </article>
+                         </div>
+                     </div>
+                  </section>       
+             </div>
         </div>
-    </div>    
+    </div>
 
 </body>
 
@@ -188,41 +157,41 @@
     <div id="about" class="content">
       <div class="columns">
         <div class="column">
-              <p class="title is-size-4">Website Pariwisata Balikpapan</h3>
-                <div class="columns">
-                  <div class="column">
-                    <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
-                    <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
-                    <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
-                    <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
-                    <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
-                  </div>
-                  <div class="column">
-                    <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
-                    <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
-                    <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
-                    <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
-                    <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
-                  </div>
-                </div>
-              <p>
-                Institut Teknologi Kalimantan
-  
-                Jl. Soekarno-Hatta Km. 15, Karang Joang, Balikpapan, Kalimantan Timur, 76127
-              </p>
-              <p>
-                <div class="columns">
-                  <div class="column">
-                    <img src="assets/image/logo_beruangmadu.png" alt="logo Beruang Madu" height="80" width="65">
-                  </div>
-                  <div class="column">
-                    <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" height="80" width="65">
-                  </div>
-                  <div class="column">
-                    <img src="assets/image/Lambang_ITK.png" alt="logo ITK" height="80" width="65">
-                  </div>
-                </div>
-              </p>
+          <p class="title is-size-4">Website Pariwisata Balikpapan</h3>
+            <div class="columns">
+              <div class="column">
+                <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
+                <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
+                <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
+                <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
+                <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
+              </div>
+              <div class="column">
+                <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
+                <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
+                <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
+                <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
+                <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
+              </div>
+            </div>
+          <p>
+            Institut Teknologi Kalimantan
+
+            Jl. Soekarno-Hatta Km. 15, Karang Joang, Balikpapan, Kalimantan Timur, 76127
+          </p>
+          <p>
+            <div class="columns">
+              <div class="column">
+                <img src="assets/image/logo_beruangmadu.png" alt="logo Beruang Madu" height="80" width="65">
+              </div>
+              <div class="column">
+                <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" height="80" width="65">
+              </div>
+              <div class="column">
+                <img src="assets/image/Lambang_ITK.png" alt="logo ITK" height="80" width="65">
+              </div>
+            </div>
+          </p>
         </div>
         <div class="column">
           <div class="box">
@@ -237,22 +206,22 @@
             </article>
             <p class="columns">
               <a class="column is-size-4" href="#">
-                <span class="button is-focus is-small"><i class="fa fa-github"></i></span>
+                <span class="button is-focus is-medium"><i class="fa fa-github"></i></span>
               </a>
               <a class="column is-size-4" href="#">
-                <span class="button has-text-info is-focus is-small"><i class="fa fa-twitter"></i></span>
+                <span class="button has-text-info is-focus is-medium"><i class="fa fa-twitter"></i></span>
               </a>
               <a class="column is-size-4" href="#">
-                <span class="button has-text-danger is-focus is-small"><i class="fa fa-instagram"></i></span>
+                <span class="button has-text-danger is-focus is-medium"><i class="fa fa-instagram"></i></span>
               </a>
               <a class="column is-size-4" href="#">
-                <span class="button has-text-link is-focus is-small"><i class="fa fa-facebook"></i></span>
+                <span class="button has-text-link is-focus is-medium"><i class="fa fa-facebook"></i></span>
               </a>
               <a class="column is-size-4" href="#">
-                <span class="button has-text-success is-focus is-small"><i class="fa fa-whatsapp"></i></span>
+                <span class="button has-text-success is-focus is-medium"><i class="fa fa-whatsapp"></i></span>
               </a>
               <a class="column is-size-4" href="#">
-                <span class="button has-text-link is-focus is-small"><i class="fa fa-linkedin"></i></span>
+                <span class="button has-text-link is-focus is-medium"><i class="fa fa-linkedin"></i></span>
               </a>
             </p>
             <article class="message is-primary">
