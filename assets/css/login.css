@@ -1,0 +1,11 @@
+#hero-background {
+    background-image: url(../image/backgroundLogin.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .title {
+    background-color: rgba(0,0,0, 0.4); 
+    width: 80%;
+    padding: 20px;
+  }
