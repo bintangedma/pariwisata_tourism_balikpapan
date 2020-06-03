@@ -6,141 +6,99 @@
     <title>Berita | Balikpapan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/berita.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 </head>
 <body>
-    <header>
-    <!--NAVBAR SECTION-->
-    <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
-
-        <div class="container">
-  
-          <!-- SECTION LEFT NAVBAR -->
-          <div class="navbar-brand">
-  
-            <!-- LOGO BALIKPAPAN -->
-            <a class="navbar-item" href="index.html">
-              <img src="./assets/image/logobalikpapan.png" alt="LOGO BALIKPAPAN" />
-            </a>
-
-            <!-- BURGER NAV -->
-            <span class="navbar-burger" data-target="navbar-menu">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </span>
-  
-          </div>
-  
-          <!-- SECTION RIGHT NAVBAR -->
-          <div id="navbar-menu" class="navbar-menu">
-            <div class="navbar-start">
-              <a href="index.html" class="navbar-item">Utama</a>
-              <a href="index.html" class="navbar-item">Video</a>
-              <a href="index.html" class="navbar-item">Destinasi</a>
-              <a href="index.html" class="navbar-item">Galeri</a>
-              <a href="index.html" class="navbar-item">Berita</a>
-              <a href="index.html" class="navbar-item">Tentang kami</a>
-            </div>
-          </div>
-  
-        </div>
-        <!-- CONTAINER END -->
-      </nav>
-  
-      <!-- BURGER MENU NAVBAR JAVASCRIPT -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-  
-          // Get all "navbar-burger" elements
-          var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
-          // Check if there are any navbar burgers
-          if ($navbarBurgers.length > 0) {
-            // Add a click event on each of them
-            $navbarBurgers.forEach(function ($el) {
-              $el.addEventListener('click', function () {
-  
-                // Get the target from the "data-target" attribute
-                var target = $el.dataset.target;
-                var $target = document.getElementById(target);
-  
-                // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-                $el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-  
-              });
-            });
-          }
-  
-        });
-      </script>
-      <!-- NAVBAR SECTION OVER -->
-    </header>
-    <!-- HEADER SECTION OVER -->
+   <!-- HEADER -->
+   <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+   <!-- HEADER SECTION OVER -->
     
-    <div class="section"></div>
-
-    <!-- BERITA HEADLINE -->
-    <div class="section">
-        <div class="contaier">
-            <div class="columns is-full is-centered">
-                <h1 class="title">Ekowisata Kampung Mangrove Kariangau</h1>
-            </div>            
-        </div>        
-    </div>
-
-    <!-- BERITA THUMBNAIL -->
-    <div class="section">
-        <div class="container">
-            <div class="columns is-full is-centered">            
-                <img src="assets/image/berita1.jpg" alt="">
-            </div>
-        </div>
-    </div>
-
+   <section class="hero is-info is-large is-bold">
+      <div class="hero-body"></div>
+    </section>
 
     <!-- BERITA CONTENT -->
-    <div class="section">
-        <div class="container">
-            <div class="columns is-full is-centered">           
-                <div class="column">
-                <p class="is-large has-text-justified">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, aspernatur facere enim quibusdam, porro temporibus aliquam saepe amet incidunt consequuntur vel modi maiores cupiditate ad adipisci culpa iure debitis non unde, voluptate error assumenda. Debitis aut molestiae nihil quod? Quod, adipisci. Facere illo labore necessitatibus, sequi corporis nostrum amet recusandae nobis dicta alias eaque obcaecati, omnis nisi quidem dolorem mollitia, impedit aliquam unde corrupti aspernatur excepturi magnam. Nisi inventore quo, voluptas doloribus fugiat tenetur obcaecati, dolorum maiores, eligendi similique id!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod molestias deserunt natus reprehenderit, error dolores itaque voluptatum, mollitia, blanditiis repudiandae corrupti sit. Sit, earum. Natus at soluta mollitia atque aut cupiditate odit quod, tenetur dolorem dolores amet doloremque sint quae corporis ipsa, accusamus cumque? Ducimus ipsam dolores impedit rem rerum, veritatis voluptas quae dolore ad expedita minima explicabo ullam nemo obcaecati excepturi iure non. Tempora veritatis consequatur, repudiandae sint cumque tempore ad atque doloremque perspiciatis? Tenetur incidunt, voluptate aperiam corrupti, molestias aspernatur commodi impedit id at architecto suscipit vero odit maxime? Id excepturi magni ad vero ipsam suscipit illum molestiae?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorum quod assumenda maiores facere blanditiis cumque necessitatibus harum voluptatum praesentium numquam velit, perferendis maxime tempore laudantium molestias voluptates nihil consequuntur beatae impedit recusandae repellendus! Odit doloremque itaque expedita ipsa ut quam cupiditate harum, natus repudiandae magni beatae, ex saepe voluptas ducimus perspiciatis atque a perferendis suscipit? Perferendis corrupti officia laudantium corporis blanditiis repudiandae ipsam, ex minus iusto magni asperiores soluta mollitia repellendus porro explicabo molestiae quas eaque libero fuga! Aut.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus dolore quasi quibusdam corporis a reiciendis ex iure ducimus possimus? Pariatur, cumque! Atque sunt voluptatum, minima mollitia molestias maxime maiores labore. Explicabo aliquam minima vero, animi error ut officia accusamus laboriosam commodi eos eligendi ducimus veniam magnam quisquam facilis dolore fugiat odit? Blanditiis laudantium voluptates magni provident illum natus cum mollitia nisi, voluptatem aliquid. Placeat, consequuntur molestias? Hic blanditiis id, ipsa numquam, aliquid, sequi nesciunt a corrupti minus voluptas quis aut.
-                </p>                            
-                </div>                 
-            </div>            
-        </div>
-    </div>
+    <div class="container">
+      <!-- START ARTICLE FEED -->
+      <section class="articles">
+          <div class="column is-18">
+              <!-- START ARTICLE -->
+              <div class="card article">
+                  <div class="card-content">
+                      <div class="media">
+                          <div class="media-content has-text-centered">
+                              <p class="title article-title">Ekowisata Kampung Mangrove Kariangau</p>
+                              <div class="tags has-addons level-item">
+                                  <span class="tag is-rounded is-primary">@Solihin</span>
+                                  <span class="tag is-rounded">May 10, 2020</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="content article-body ">
+                          <p class="has-text-justified">Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar.
+                            Penentuan waktu penutupan ini dengan memperkirakan nuansa lebaran, sehingga menunda keinginan warga untuk keluar rumah. Pemkot Balikpapan meminta warga untuk tetap berada di rumah selama lebaran.
+                            Perkembangan situasi penyebaran Covid-19 di Kota Balikpapan mulai menurun. Jumlah pasien sembuh lebih banyak dari pasien terkonfirmasi positif.
+                          </p>
+                          <p class="has-text-justified">
+                            Kini objek wisata yang berada di Balikpapan Utara ini bisa diinikmati warga, pelancong dari dalam negeri maupun luar negeri.
+                            Pembangunan Kampung Mangrove Kariangau ini sudah cukup lama, dan baru terlaksana hari ini, Minggu (21/7/2019).
+                            Pertamina Marketing Operation Region VI Kalimantan melalui Depot LPG Balikpapan memberikan bantuan CSR pengembangan wisata dan pemberdayaan masyarakat melalui program Ekowisata Mangrove Kariangau.
+                            Terletak di kawasan jembatan ulin Kariangau, Walikota Balikpapan Rizal Effendi bersama dengan Ali Akbar, Operation Head Depot LPG Balikpapan meresmikan rumah makan apung sebagai salah satu bagian dari program Ekowisata Mangrove Kariangau.
+                            Menurut Ali, program CSR Depot LPG Balikpapan dilaksanakan karena melihat potensi pemberdayaan masyarakat dan pengembangan wisata di kawasan jembatan ulin Kariangau.
+                            Ali menjelaskan bahwa program CSR yang dilaksanakan berupa budidaya kepiting bakau, pelatihan pembuatan produk makanan olahan, dan pembangunan rumah makan berbentuk perahu yang akan menjadi tempat pemasaran hasil produk tambak dan makanan olahan buatan masyarakat. 
+                            Sasaran dari program CSR Depot LPG Balikpapan ini adalah masyarakat RT 01 & 02 Kariangau.
+                          </p>
+                          <p class="has-text-justified">
+                            “Penerima manfaat program ini tidak hanya kaum pria yang tergabung dalam kelompok nelayan semangat baru Kariangau, namun juga dirasakan oleh para ibu rumah tangga yang tergabung dalam kelompok Kariangau Lestari”, lanjut Ali.
+                            Dalam pelaksanaan bantuan CSR ini Pertamina yang bekerjasama dengan Econatural berupaya selalu melibatkan masyarakat mulai tahap perencaaan hingga pelaksanaan.
+                            Pembangunan keramba dan rumah makan tersebut dikerjakan secara gotong royong oleh masyarakat Kariangau.
+                            Sehingga diharapkan akan menumbuhkan rasa memiliki dari masyarakat terhadap bantuan yang telah diberikan oleh Pertamina.
+                            Dalam kegiatan peresmian bantuan CSR Depot LPG Balikpapan tersebut, Rizal Effendi menyampaikan harapannya agar keberadaan rumah makan apung di Kariangau mampu menjadi ikon wisata baru di wilayah Kariangau dan dapat berdampak pada peningkatan kesejahteraan masyarakat Kariangau.
+                            Selain itu, Rizal juga berpesan agar masyarakat terus aktif menjaga kelestarian mangrove di wilayah tersebut, karena selain melindungi lingkungan, mangrove juga merupakan sumber pakan untuk kepiting yang dibudidayakan.
+                            Sehingga keberlangsungan program ini juga sangat bergantung pada kelestarian kawasan mangrove itu sendiri.
+                            Dalam kesempatan yang sama, Rizal juga mengunjungi keramba dan melakukan penebaran bibit kepiting serta menyerahkan secara simbolis bantuan bibit mangrove yang akan ditanam untuk menambah kelestarian kawasan.
+                            Depot LPG Balikpapan adalah satu-satunya supply point untuk pengisian LPG yg dipasarkan di Kalimantan Timur dan Kalimantan Utara.
+                            Penyaluran LPG 3 kg untuk daerah Balikpapan, Penajam dan Kutai Kertanegara rata-rata 30.000 tabung per hari atau +- 90 MT.
+                          </p>
+                          <p class="has-text-justified">
+                            Selain itu, penyaluran LPG 3 kg untuk wilayah Tarakan, Nunukan dan Sebatik juga di supply dari Depot LPG Balikpapan menggunakan moda angkutan laut.
+                            Yaitu LCT (landing craft tanker) dengan kapasitas LCT +- 35.000 tabung atau 105 MT dalam 1 kali angkut dengan rata-rata pengangkutan dalam 1 bulan adalah 5-6 kali.
+                            Selain pengisian tabung LPG 3 kg, di depot LPG balikpapan juga melakukan pengisian Skid Tank yang dikirim dalam bentuk mix bulk ke SPBE yg berada di Kalimantan Timur (Balikpapan, Samarinda, Kukar, Penajam dan Sangkulirang).
+                            Yang nantinya SPBE tersebut sebagai lokasi pengisian tabung yg selanjutnya akan dikirimkan ke seluruh wilayah Kalimantan Timur dan Kalimantan Utara. Rata-rata penyaluran LPG mix bulk ke SPBE sebesar 400 MT per hari
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <!-- END ARTICLE -->
+              
+            </div>
+
+      </section>
+      </div>
+      <!-- ARTICLE SECTION END -->
 
     <div class="section">
         <div class="container">            
 
               <div id="newComment">
                 <div v-for="comment in items"> 
-                    <article class="media">
-                        <figure class="media-left">
-                            <p class="image is-64x64">
-                                <img src="assets/image/user.png">
-                            </p>
-                        </figure>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <strong>{{comment.user}}</strong>
-                                    <br>
-                                        {{comment.isi}}                            
-                                    <br>
-                                    <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-                                    </p>
-                                    <br>
-                            </div>
-                        </div>          
-                    </article>                                
+                  <div class="card">
+                    <div class="card-content">
+                      <p>
+                        <h1 class="title is-5">{{comment.user}}</h1>
+                        <div class="tags">
+                          <span class="tag">{{comment.tgl}}</span>
+                        </div>
+                        <br>
+                            {{comment.isi}}                            
+                        <br>                      
+                      </p>
+                      <br>
+                      </div>   
+                  </div>    
+                  <br>                                  
                 </div>      
             </div>
         
@@ -150,25 +108,21 @@
                 el: '#newComment',
                 data: {
                   items: [
-                    {user: "Solihin", isi: "Beritanya mantap gan lanjutkan..!"},
-                    {user: "Barbara Smith", isi: "Luhar Biasa wal"},
-                    {user: "Smith", isi: "Wew Gila Corona #stayAtHome "}
+                    {user: "Solihin", tgl: "16 Juni 2020", isi: "Bagi Link yang mempersatukan bangsa dong!"},
+                    {user: "Barbara Smith", tgl: "16 Juni 2020", isi: "Luhar Biasa wal"},
+                    {user: "Smith", tgl: "25 Agustus 2020", isi: "Wew Gila Corona #stayAtHome "},
+                    {user: "Bambang Susanto", tgl: "25 May 2020", isi: "Saya suka spongebob karena warnanya kuning!."}
                   ]
                 }
               })
             </script>
 
 
-              <article class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img src="assets/image/user.png">
-                  </p>
-                </figure>
+              <article class="media">               
                 <div class="media-content">
                   <div class="field">
                     <p class="control">
-                      <textarea class="textarea" id="commentNew" v-model="message" placeholder="Add a comment..."></textarea> 
+                      <textarea class="textarea is-primary is-medium" id="commentNew" v-model="message" placeholder="Add a comment"></textarea> 
                     </p>
                   </div>
                   <div class="field">
@@ -184,103 +138,7 @@
 </body>
 
 <!--FOOTER-->
-<footer class="footer">
-    <div id="about" class="content">
-      <div class="columns">
-        <div class="column">
-              <p class="title is-size-4">Website Pariwisata Balikpapan</h3>
-                <div class="columns">
-                  <div class="column">
-                    <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
-                    <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
-                    <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
-                    <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
-                    <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
-                  </div>
-                  <div class="column">
-                    <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
-                    <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
-                    <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
-                    <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
-                    <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
-                  </div>
-                </div>
-              <p>
-                Institut Teknologi Kalimantan
-  
-                Jl. Soekarno-Hatta Km. 15, Karang Joang, Balikpapan, Kalimantan Timur, 76127
-              </p>
-              <p>
-                <div class="columns">
-                  <div class="column">
-                    <img src="assets/image/logo_beruangmadu.png" alt="logo Beruang Madu" height="80" width="65">
-                  </div>
-                  <div class="column">
-                    <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" height="80" width="65">
-                  </div>
-                  <div class="column">
-                    <img src="assets/image/Lambang_ITK.png" alt="logo ITK" height="80" width="65">
-                  </div>
-                </div>
-              </p>
-        </div>
-        <div class="column">
-          <div class="box">
-            <article class="message is-primary">
-              <div class="message-header">
-                <p class="is-size-4">Tentang kami</p>
-              </div>
-              <div class="message-body">
-                <p>Tujuan dibuatnya situs web ini adalah untuk membantu orang orang untuk mencari tempat wisata saat ingin
-                  mengunjungi kota Balikpapan</p>
-              </div>
-            </article>
-            <p class="columns">
-              <a class="column is-size-4" href="#">
-                <span class="button is-focus is-small"><i class="fa fa-github"></i></span>
-              </a>
-              <a class="column is-size-4" href="#">
-                <span class="button has-text-info is-focus is-small"><i class="fa fa-twitter"></i></span>
-              </a>
-              <a class="column is-size-4" href="#">
-                <span class="button has-text-danger is-focus is-small"><i class="fa fa-instagram"></i></span>
-              </a>
-              <a class="column is-size-4" href="#">
-                <span class="button has-text-link is-focus is-small"><i class="fa fa-facebook"></i></span>
-              </a>
-              <a class="column is-size-4" href="#">
-                <span class="button has-text-success is-focus is-small"><i class="fa fa-whatsapp"></i></span>
-              </a>
-              <a class="column is-size-4" href="#">
-                <span class="button has-text-link is-focus is-small"><i class="fa fa-linkedin"></i></span>
-              </a>
-            </p>
-            <article class="message is-primary">
-              
-              <div class="message-body">
-                <p>Balikpapan Kota BERIMAN</p>
-                <i>"Bersih, Indah, Aman, dan Nyaman"</i>
-              </div>
-            </article>
-            <!-- <p>Balikpapan Kota BERIMAN</p>
-            <p>Bersih, Indah, Aman, dan Nyaman</p> -->
-          </div>
-        </div>
-        <div class="column">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid"
-            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-            tabindex="0"></iframe>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="footer-bottom">
-    <article class="hero is-primary">
-      <div class="hero-title">
-        Powered by Kelompok 9 Web Design | 2020 &copy;
-      </div>
-    </article>
-  </div>
-  <!--FOOTER SECTION OVER-->
+<iframe src="footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+<!--FOOTER SECTION OVER-->
+
 </html>

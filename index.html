@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/new_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
   <script src="assets/Javascript/vue.js"></script>
   <title>Website Pariwisata | Balikpapan</title>
 
@@ -214,17 +215,14 @@
           <div class="column">                  
             <div class="card">
               <div class="card-image">
-                <figure class="image is-4by3">
-                  <a href="destinasi.html">
-                  <img v-bind:src="destinasi.thumbnail" alt="Placeholder image">
-                  </a>
+                <figure class="image is-4by3">                  
+                  <img v-bind:src="destinasi.thumbnail" alt="Placeholder image">                  
                 </figure>
               </div>
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">{{destinasi.title}}</p>
-                    <img src="assets/image/rating.png" alt="rating">
                   </div>
                 </div>
 
@@ -232,8 +230,17 @@
                   {{destinasi.isiDestinasi}}
                   <a>@Balikpapan</a>.
                   <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                  <br>
+                  
                   <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                  
+                </div>
+                <div class="content-footer">
+                  <a href="destinasi.html"><button class="button is-primary is-light">
+                    Visit Review
+                  </button></a>
+                  <button class="button is-primary">
+                    Learn More
+                  </button>
                 </div>
               </div>
             </div>
@@ -263,10 +270,10 @@
     <div class="container">
       <nav class="pagination" role="navigation" aria-label="pagination">
         <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
-        <a class="pagination-next">Next page</a>
+        <a class="pagination-next is-primary">Next page</a>
         <ul class="pagination-list">
           <li>
-            <a class="pagination-link" aria-label="Page 1" aria-current="page">1</a>
+            <a class="button is-primary" aria-label="Page 1" aria-current="page">1</a>
           </li>
           <li>
             <a class="pagination-link" aria-label="Goto page 2">2</a>
@@ -314,27 +321,7 @@
             </div>
             <span class="modal-close"></span>
           </div>
-          <img src="assets/image/bppgallery1.jpg" id="myImg">
-          <script>
-            // Get the modal
-            var modal = document.getElementById("myModal");
-            
-            // Get the image and insert it inside the modal 
-            var img = document.getElementById("myImg");
-            var modalImg = document.getElementById("img01");
-            img.onclick = function(){
-              modal.style.display = "block";
-              modalImg.src = this.src;
-            }
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("modal-close")[0];
-            
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-              modal.style.display = "none";
-            }
-            </script>
+          <img src="assets/image/bppgallery1.jpg" class="modal-button" data-target="modal-gallery">          
           <img src="assets/image/bppgallery2.jpg">
           <img src="assets/image/bppgallery3.jpg" width="100%">
           <img src="assets/image/bppgallery4.jpeg">
@@ -355,6 +342,7 @@
           <img src="assets/image/bppgallery1.jpg">
         </div>
       </div>
+      
     </section>
   </div>
     <!-- GALLERY SECTION OVER -->
@@ -389,10 +377,8 @@
               <div class="column">
                 <div class="card">
                   <div class="card-image">
-                    <figure class="image is-4by3">
-                      <a href="berita.html">
+                    <figure class="image is-4by3">                      
                       <img v-bind:src="berita.thumbnail" alt="Placeholder image">
-                      </a>
                     </figure>
                   </div>
                   <div class="card-content">
@@ -403,12 +389,27 @@
                     </div>
                           
                     <div class="content">
-                      {{berita.isiBerita}}
-                      <a href="#">#NewsBalikpapan</a>
+                      <p>{{berita.isiBerita}}</p>
                       <br>
-                      <time>{{berita.tanggal}}</time>
+                    <div class="tags">
+                      <span class="tag is-rounded is-primary">
+                        #pemkotBalikpapan
+                      </span>
+                      <span class="tag is-rounded is-primary">
+                        #beritaBalikpapan
+                      </span>
+                      <span class="tag is-rounded">
+                        {{berita.tanggal}}
+                      </span>
                     </div>
-                  </div>
+                    </div>
+                    <div class="content-footer">
+                      <a href="berita.html"><button class="button is-primary">
+                        Read More
+                      </button>
+                    </a>
+                    </div>
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -438,7 +439,7 @@
         <a class="pagination-next">Next page</a>
         <ul class="pagination-list">
           <li>
-            <a class="pagination-link" aria-label="Page 1" aria-current="page">1</a>
+            <a class="button is-primary" aria-label="Page 1" aria-current="page">1</a>
           </li>
           <li>
             <a class="pagination-link" aria-label="Goto page 2">2</a>
@@ -452,108 +453,65 @@
   <hr>
   </div>
   <!-- BERITA SECTION OVER -->
-</body>
-<!--BODY SECTION OVER-->
-
-<!--FOOTER-->
-<footer class="footer">
-  <div id="about" class="content">
-    <div class="columns">
-      <div class="column">
-        <p class="title is-size-4">Website Pariwisata Balikpapan</h3>
-          <div class="columns">
-            <div class="column">
-              <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
-              <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
-              <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
-              <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
-              <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
+  <div id="location">
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+  
+            <div class="column is-half">
+              <h1 class="title is-primary">LOKASI KAMI</h1>
+              <h2 class="subtitle is-5  has-margin-top-50">
+                Lorem ipsum dolor sit, amet consectetur ad  ipisicing elit. Molestias suscipit ut dolor corrupti quisquam, repellat in!
+              </h2>
             </div>
-            <div class="column">
-              <p><a href="#home">Utama <i class="fa fa-home"></i></a></p>
-              <p><a href="#about">Tentang <i class="fa fa-info"></i></a></p>
-              <p><a href="#help">Bantu <i class="fa fa-question"></i></a></p>
-              <p><a href="#contact">Kontak <i class="fa fa-phone"></i></a></p>
-              <p><a href="#destinasi">Lokasi <i class="fa fa-building"></i></a></p>
+  
+            <div class="column is-half">
+              <img src="assets/image/lokasisection.png" alt="">
             </div>
           </div>
-        <p>
-          Institut Teknologi Kalimantan
-
-          Jl. Soekarno-Hatta Km. 15, Karang Joang, Balikpapan, Kalimantan Timur, 76127
-        </p>
-        <p>
-          <div class="columns">
-            <div class="column">
-              <img src="assets/image/logo_beruangmadu.png" alt="logo Beruang Madu" height="80" width="65">
-            </div>
-            <div class="column">
-              <img src="assets/image/logobalikpapan.png" alt="logo Pemkot" height="80" width="65">
-            </div>
-            <div class="column">
-              <img src="assets/image/Lambang_ITK.png" alt="logo ITK" height="80" width="65">
-            </div>
-          </div>
-        </p>
-  </div>
-      <div class="column">
-        <div class="box">
-          <article class="message is-primary">
-            <div class="message-header">
-              <p class="is-size-4">Tentang kami</p>
-            </div>
-            <div class="message-body">
-              <p>Tujuan dibuatnya situs web ini adalah untuk membantu orang orang untuk mencari tempat wisata saat ingin
-                mengunjungi kota Balikpapan</p>
-            </div>
-          </article>
-          <p class="columns">
-            <a class="column is-size-4" href="#">
-              <span class="button is-focus is-medium"><i class="fa fa-github"></i></span>
-            </a>
-            <a class="column is-size-4" href="#">
-              <span class="button has-text-info is-focus is-medium"><i class="fa fa-twitter"></i></span>
-            </a>
-            <a class="column is-size-4" href="#">
-              <span class="button has-text-danger is-focus is-medium"><i class="fa fa-instagram"></i></span>
-            </a>
-            <a class="column is-size-4" href="#">
-              <span class="button has-text-link is-focus is-medium"><i class="fa fa-facebook"></i></span>
-            </a>
-            <a class="column is-size-4" href="#">
-              <span class="button has-text-success is-focus is-medium"><i class="fa fa-whatsapp"></i></span>
-            </a>
-            <a class="column is-size-4" href="#">
-              <span class="button has-text-link is-focus is-medium"><i class="fa fa-linkedin"></i></span>
-            </a>
-          </p>
-          <article class="message is-primary">
-            
-            <div class="message-body">
-              <p>Balikpapan Kota BERIMAN</p>
-              <i>"Bersih, Indah, Aman, dan Nyaman"</i>
-            </div>
-          </article>
-          <!-- <p>Balikpapan Kota BERIMAN</p>
-          <p>Bersih, Indah, Aman, dan Nyaman</p> -->
         </div>
       </div>
-      <div class="column">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid"
-          width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-          tabindex="0"></iframe>
-      </div>
-    </div>
+    </section>
   </div>
-</footer>
-<div class="footer-bottom">
-  <article class="hero is-primary">
-    <div class="hero-title">
-      Powered by Kelompok 9 Web Design | 2020 &copy;
+  <section class="section hero ">
+    <div class="columns video-bpp is-fill is-centered is-mobile">
+      <!-- VIDEO YOUTUBE -->
+      <div class="container">
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <figure class="image">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid"
+              width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+            </figure>
+          </div>
+          <div class="column is-centered">
+            <h1 class="title is-2">Our Location</h1>
+            <br>
+            <br>
+            <p class="subtitle is-2">Lorem, ipsum:</p>
+            <p>Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ducimus? 
+              Provident quidem incidunt alias rem vel perferendis nisi.</p>
+          </div>
+        </div>      
     </div>
-  </article>
+    </div>
+  </section>
+</body>
+<!--BODY SECTION OVER-->
+<div id="modal-gallery" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery1.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
 </div>
+<script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+
+<!--FOOTER-->
+<iframe src="footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 <!--FOOTER SECTION OVER-->
 
 </html>
