@@ -82,61 +82,56 @@
     <div class="section">
         <div class="container">            
 
-              <div id="newComment">
-                <div v-for="comment in items"> 
-                  <div class="card">
-                    <div class="card-content">
-                      <p>
-                        <h1 class="title is-5">{{comment.user}}</h1>
-                        <div class="tags">
-                          <span class="tag">{{comment.tgl}}</span>
-                        </div>
-                        <br>
-                            {{comment.isi}}                            
-                        <br>                      
-                      </p>
-                      <br>
-                      </div>   
-                  </div>    
-                  <br>                                  
-                </div>      
-            </div>
-        
-            <!-- VUE.JS FOR comment SECTION -->
-            <script>
-              new Vue({
-                el: '#newComment',
-                data: {
-                  items: [
-                    {user: "Solihin", tgl: "16 Juni 2020", isi: "Bagi Link yang mempersatukan bangsa dong!"},
-                    {user: "Barbara Smith", tgl: "16 Juni 2020", isi: "Luhar Biasa wal"},
-                    {user: "Smith", tgl: "25 Agustus 2020", isi: "Wew Gila Corona #stayAtHome "},
-                    {user: "Bambang Susanto", tgl: "25 May 2020", isi: "Saya suka spongebob karena warnanya kuning!."}
-                  ]
-                }
-              })
-            </script>
-
-
-              <article class="media">               
-                <div class="media-content">
-                  <div class="field">
-                    <p class="control">
-                      <textarea class="textarea is-primary is-medium" id="commentNew" v-model="message" placeholder="Add a comment"></textarea> 
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <button class="button is-primary" id="postComment">Post comment</button>
-                    </p>
+          <div id="newComment">
+            <div v-for="comment in items"> 
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <h1 class="title is-5">{{comment.user}}</h1>
+                    <div class="tags">
+                      <span class="tag">{{comment.tgl}}</span>
+                    </div>
+                    <br>
+                        {{comment.isi}}                            
+                    <br>                      
+                  </p>
+                  <br>
+                  </div>   
+              </div>    
+              <br>                                  
+            </div>      
+            <br>
+            <br>
+            <article class="media">               
+              <div class="media-content">
+                <div class="field">
+                  <div class="columns">
+                    <div class="column is-4">
+                      <input type="text" v-model="txtNama" class="input is-primary is-medium" placeholder="Masukkan Nama">
+                    </div>
                   </div>
                 </div>
-              </article>
+                <div class="field">
+                  <p class="control">
+                    <textarea v-model="txtComment" class="textarea is-primary is-medium" placeholder="Add a comment"></textarea> 
+                  </p>
+                </div>                
+                  <p class="control">
+                    <button v-on:click="addComment()" class="button is-primary" id="postComment">Post comment</button>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        
+           
+                     
         </div>
     </div>    
 
 </body>
-
+ <!-- VUE.JS FOR comment SECTION -->
+ <script src="assets/Javascript/berita.js"></script>
 <!--FOOTER-->
 <iframe src="footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 <!--FOOTER SECTION OVER-->
