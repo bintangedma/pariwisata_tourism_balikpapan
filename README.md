@@ -2,7 +2,7 @@
 ![Description](https://github.com/MohFahmi27/pariwisata_tourism_balikpapan/blob/master/assets/image/ScreenShot.png)
 
 ## Presented By:
-kelompok 9 :
+Kelompok 9 :
 
  1. Bintang Edma Rizqi (11181018)
  2. Fathima Azzahra (11181028)
