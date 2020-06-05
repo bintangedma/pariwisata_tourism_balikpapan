@@ -36,6 +36,19 @@ data: {
 });
 
 new Vue({
+  el: '#hotelCard',
+  data: {
+      hotels: [
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."}
+      ]
+  }
+  });
+
+new Vue({
     el: '#beritaContent',
     data: {
       news: [

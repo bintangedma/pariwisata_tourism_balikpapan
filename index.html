@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
-  <link rel="stylesheet" href="assets/css/index.css">
   <script src="assets/Javascript/vue.js"></script>
   <title>Website Pariwisata | Balikpapan</title>
 
@@ -241,6 +240,83 @@
   </div>
   <!-- DESTINASI SECTION OVER -->
 
+  <!-- HOTEL SECTION -->
+  <div id="hotelSection">
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+            
+            <div class="column is-half">
+              <h1 class="title is-primary">HOTEL TERSEDIA</h1>
+              <br>
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Berikut merupakan list dari hotel berbintang 5 yang ada di Balikpapan</h2>
+            </div>
+
+            <div class="column is-half">
+              <img src="assets/image/HotelSection.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section hero">
+      <!-- DESTINASI CARD COMPONENT -->
+      <div id="hotelCard">
+        <div class="columns">
+        <div v-for="hotel in hotels">          
+          <div class="column">                  
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">                  
+                  <img v-bind:src="hotel.thumbnail" alt="Placeholder image">                  
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{hotel.title}}</p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  {{hotel.desc}}
+                  <a>@Balikpapan</a>.                                                    
+                  <img src="assets/image/rating.png" alt="">
+                </div>
+                <a href="hotel.html"><button class="button is-primary modal-button" data-target="modal-hotel">Learn More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>      
+    </section>
+
+    <div class="container">
+      <nav class="pagination" role="navigation" aria-label="pagination">
+        <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+        <a class="pagination-next is-primary">Next page</a>
+        <ul class="pagination-list">
+          <li>
+            <a class="button is-primary" aria-label="Page 1" aria-current="page">1</a>
+          </li>
+          <li>
+            <a class="pagination-link" aria-label="Goto page 2">2</a>
+          </li>
+          <li>
+            <a class="pagination-link" aria-label="Goto page 3">3</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <hr>
+  </div>
+  <!-- HOTEL SECTION OVER -->
+
   <!--GALLERY SECTION-->
   <div id="gallery">
     <section class="section hero">
@@ -249,30 +325,23 @@
           <div class="columns is-vcentered is-4">
   
             <div class="column is-half">
+              <img src="assets/image/gallerysection.png" alt="">
+            </div>
+
+            <div class="column is-half">
               <h1 class="title is-primary">GALERI KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Foto tentang destinasi-destinasi yang akan dikunjungi, turut membantu men-visualisasikan suatu daerah pariwisata kepada pariwisatawan.</h2>
             </div>
-  
-            <div class="column is-half">
-              <img src="assets/image/gallerysection.png" alt="">
-            </div>
+          
           </div>
         </div>
       </div>
     </section>
+    
     <section class="section hero">
-      <div class="columns is-1">
+      <div class="columns is-1">        
         <div class="column">
-          <div id="myModal" class="modal">            
-            <div class="modal-background"></div>
-            <div class="modal-content">
-              <p class="image is-4by3">
-                <img id="img01" src="assets/image/bppgallery1.jpg" alt="">
-              </p>
-            </div>
-            <span class="modal-close"></span>
-          </div>
           <img src="assets/image/bppgallery1.jpg" class="modal-button" data-target="modal-gallery">          
           <img src="assets/image/bppgallery2.jpg">
           <img src="assets/image/bppgallery3.jpg" width="100%">
@@ -281,7 +350,7 @@
         </div>
         <div class="column">
           <img src="assets/image/bppgallery3.jpg" width="100%">
-          <img src="assets/image/bppgallery2.jpg">
+          <img src="assets/image/bppgallery2.jpg" class="modal-button" data-target="modal-gallery2">
           <img src="assets/image/bppgallery1.jpg">
           <img src="assets/image/bppgallery4.jpeg">
           <img src="assets/image/bppgallery5.jpg">
@@ -304,16 +373,16 @@
       <section class="section hero">
         <div class="card is-large ">
           <div class="container">
-            <div class="columns is-vcentered is-4">
-    
-              <div class="column is-half">
-                <img src="assets/image/ourNews.png" alt="">
-              </div>
+            <div class="columns is-vcentered is-4">                  
 
               <div class="column is-half">
               <h1 class="title is-primary">BERITA KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Pengetahuan tentang daerah yang akan dikunjungi sangat perlu. Sehingga, selain melihat video atau gambar, berita juga merupakan pilihan yang tepat untuk mencari tahu.</h2>
+              </div>
+
+              <div class="column is-half">
+                <img src="assets/image/ourNews.png" alt="">
               </div>
 
             </div>
@@ -397,16 +466,17 @@
           <div class="columns is-vcentered is-4">
   
             <div class="column is-half">
+              <img src="assets/image/ourLocation.png" alt="">
+            </div>
+
+            <div class="column is-half">
               <h1 class="title is-primary">LOKASI KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">
                 Lorem ipsum dolor sit, amet consectetur ad  ipisicing elit. Molestias suscipit ut dolor corrupti quisquam, repellat in!
               </h2>
             </div>
-  
-            <div class="column is-half">
-              <img src="assets/image/ourLocation.png" alt="">
-            </div>
+              
           </div>
         </div>
       </div>
@@ -435,10 +505,6 @@
       <div class="card">
         <div class="container">
           <div class="columns is-vcentered is-4">
-            
-            <div class="column is-half">
-              <img src="assets/image/contactSection.png" alt="">
-            </div>
 
             <div class="column is-half">
               <h1 class="title is-primary">CONTACT US</h1>
@@ -456,6 +522,11 @@
               <hr>
               <button class="button is-block is-fullwidth is-primary is-medium">Send Message</button>
             </div>
+            
+            <div class="column is-half">
+              <img src="assets/image/contactSection.png" alt="">
+            </div>
+            
           </div>            
         </div>
       </div>
@@ -519,8 +590,17 @@
     <div class="modal-content is-huge is-image">
       <img src="assets/image/bppgallery1.jpg" alt="">
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery2" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+    <div class="modal-content is-huge is-image">
+      <img src="assets/image/bppgallery2.jpg" alt="">
+    </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
 <!-- MODAL TARGET SECTION END -->
 
