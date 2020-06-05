@@ -1,0 +1,19 @@
+.hero-body {
+    background-image: url(../image/pantai-lamaru-destinasi-poage.jpg);    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.bg-text {
+    background-color: rgba(0,0,0, 0.4); 
+    color: #00b893;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
