@@ -36,13 +36,38 @@ data: {
 });
 
 new Vue({
+  el: '#hotelCard',
+  data: {
+      hotels: [
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."},
+          {thumbnail: "assets/image/hotelPlatinum.jpg", title: "Hotel Platinum", desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."}
+      ]
+  }
+  });
+
+new Vue({
     el: '#beritaContent',
     data: {
       news: [
         {thumbnail: "assets/image/berita1.jpg", title: "Ekowisata Kampung Mangrove Kariangau", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
         {thumbnail: "assets/image/berita2.jpg", title: "Ekowisata Kampung Mangrove Kariangau", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
-        {thumbnail: "assets/image/berita3.jpg", title: "Beritanya mantap gan lanjutkan..!", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
-        {thumbnail: "assets/image/berita4.jpg", title: "Beritanya mantap gan lanjutkan..!", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},          
+        {thumbnail: "assets/image/berita3.jpg", title: "Ekowisata Kampung Mangrove Kariangau", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},
+        {thumbnail: "assets/image/berita4.jpg", title: "Ekowisata Kampung Mangrove Kariangau", isiBerita:"Selain dikenal sebagai kota minyak, Balikpapan Kalimantan Timur yang terletak di pesisir pantai juga menyimpan potensi kekayaan alam dan hasil tangkapan laut yang cukup besar", tanggal:"2019-07-12"},          
       ]
     }
-  })
+  });
+
+new Vue({
+  el: '#ourteam',
+  data: {
+    teams : [
+      {thumbnail: "https://bulma.io/images/placeholders/128x128.png",nama:"Bintang Edma Rizqi", quote:"'KALO AKU NASI BUNGKUS KAMU KARETNYA TANPA KAMU AKU AMBYAR'"},
+      {thumbnail: "https://bulma.io/images/placeholders/128x128.png",nama:"Fathima Azzahra", quote:"'KALO AKU NASI BUNGKUS KAMU KARETNYA TANPA KAMU AKU AMBYAR'"},
+      {thumbnail: "https://bulma.io/images/placeholders/128x128.png",nama:"Mohammad Fahmi", quote:"'KALO AKU NASI BUNGKUS KAMU KARETNYA TANPA KAMU AKU AMBYAR'"},
+      {thumbnail: "https://bulma.io/images/placeholders/128x128.png",nama:"Muhammad Noor Iham", quote:"'KALO AKU NASI BUNGKUS KAMU KARETNYA TANPA KAMU AKU AMBYAR'"}
+    ]
+  }
+});

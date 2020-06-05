@@ -56,7 +56,7 @@
             <a href="#destinasi" class="navbar-item">Destinasi</a>
             <a href="#gallery" class="navbar-item">Galeri</a>
             <a href="#news" class="navbar-item">Berita</a>
-            <a href="#about" class="navbar-item">Tentang kami</a>
+            <a href="#contact" class="navbar-item">Contact</a>
             <div class="navbar-item">
               <div class="buttons">
                 <a href="login.html" class="button is-primary">
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-          <div class="columns is-gapless">
+          <div class="columns is-vcentered">
             <div class="column is-full">
               <h1 class="subtitle is-4">
                 Website Pariwisata penyedia informasi tentang kawasan pariwisata yang ada di kota Balikpapan.
@@ -143,12 +143,12 @@
     </section>
   </div>
   <div class="hero has-text-centered">
-    <div class="columns video-bpp is-fill is-centered is-mobile">
+    <div class="columns is-fill is-centered is-mobile">
       <!-- VIDEO YOUTUBE -->
-      <div class="container">
+      <div class="column is-full">
       <figure class="image">
         <iframe src="https://www.youtube.com/embed/v441IXOTSUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
-        picture-in-picture" allowfullscreen></iframe>
+        picture-in-picture" width="100%" height="750px" allowfullscreen></iframe>
       </figure>
     </div>
     </div>
@@ -179,7 +179,6 @@
       <!-- DESTINASI CARD COMPONENT -->
       <div id="destinasiCard">
         <div class="columns">
-        
         <div v-for="destinasi in destination">          
           <div class="column">                  
             <div class="card">
@@ -204,12 +203,9 @@
                   
                 </div>
                 <div class="content-footer">
-                  <a href="destinasi.html"><button class="button is-primary is-light">
+                  <a href="destinasi.html"><button class="button is-primary">
                     Visit Review
                   </button></a>
-                  <button class="button is-primary">
-                    Learn More
-                  </button>
                 </div>
               </div>
             </div>
@@ -244,6 +240,83 @@
   </div>
   <!-- DESTINASI SECTION OVER -->
 
+  <!-- HOTEL SECTION -->
+  <div id="hotelSection">
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+            
+            <div class="column is-half">
+              <h1 class="title is-primary">HOTEL TERSEDIA</h1>
+              <br>
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Berikut merupakan list dari hotel berbintang 5 yang ada di Balikpapan</h2>
+            </div>
+
+            <div class="column is-half">
+              <img src="assets/image/HotelSection.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section hero">
+      <!-- DESTINASI CARD COMPONENT -->
+      <div id="hotelCard">
+        <div class="columns">
+        <div v-for="hotel in hotels">          
+          <div class="column">                  
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">                  
+                  <img v-bind:src="hotel.thumbnail" alt="Placeholder image">                  
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{hotel.title}}</p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  {{hotel.desc}}
+                  <a>@Balikpapan</a>.                                                    
+                  <img src="assets/image/rating.png" alt="">
+                </div>
+                <a href="hotel.html"><button class="button is-primary modal-button" data-target="modal-hotel">Learn More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>      
+    </section>
+
+    <div class="container">
+      <nav class="pagination" role="navigation" aria-label="pagination">
+        <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+        <a class="pagination-next is-primary">Next page</a>
+        <ul class="pagination-list">
+          <li>
+            <a class="button is-primary" aria-label="Page 1" aria-current="page">1</a>
+          </li>
+          <li>
+            <a class="pagination-link" aria-label="Goto page 2">2</a>
+          </li>
+          <li>
+            <a class="pagination-link" aria-label="Goto page 3">3</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <hr>
+  </div>
+  <!-- HOTEL SECTION OVER -->
+
   <!--GALLERY SECTION-->
   <div id="gallery">
     <section class="section hero">
@@ -252,30 +325,23 @@
           <div class="columns is-vcentered is-4">
   
             <div class="column is-half">
+              <img src="assets/image/gallerysection.png" alt="">
+            </div>
+
+            <div class="column is-half">
               <h1 class="title is-primary">GALERI KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Foto tentang destinasi-destinasi yang akan dikunjungi, turut membantu men-visualisasikan suatu daerah pariwisata kepada pariwisatawan.</h2>
             </div>
-  
-            <div class="column is-half">
-              <img src="assets/image/gallerysection.png" alt="">
-            </div>
+          
           </div>
         </div>
       </div>
     </section>
+    
     <section class="section hero">
-      <div class="columns is-1">
+      <div class="columns is-1">        
         <div class="column">
-          <div id="myModal" class="modal">            
-            <div class="modal-background"></div>
-            <div class="modal-content">
-              <p class="image is-4by3">
-                <img id="img01" src="assets/image/bppgallery1.jpg" alt="">
-              </p>
-            </div>
-            <span class="modal-close"></span>
-          </div>
           <img src="assets/image/bppgallery1.jpg" class="modal-button" data-target="modal-gallery">          
           <img src="assets/image/bppgallery2.jpg">
           <img src="assets/image/bppgallery3.jpg" width="100%">
@@ -284,7 +350,7 @@
         </div>
         <div class="column">
           <img src="assets/image/bppgallery3.jpg" width="100%">
-          <img src="assets/image/bppgallery2.jpg">
+          <img src="assets/image/bppgallery2.jpg" class="modal-button" data-target="modal-gallery2">
           <img src="assets/image/bppgallery1.jpg">
           <img src="assets/image/bppgallery4.jpeg">
           <img src="assets/image/bppgallery5.jpg">
@@ -307,16 +373,16 @@
       <section class="section hero">
         <div class="card is-large ">
           <div class="container">
-            <div class="columns is-vcentered is-4">
-    
-              <div class="column is-half">
-                <img src="assets/image/ourNews.png" alt="">
-              </div>
+            <div class="columns is-vcentered is-4">                  
 
               <div class="column is-half">
               <h1 class="title is-primary">BERITA KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Pengetahuan tentang daerah yang akan dikunjungi sangat perlu. Sehingga, selain melihat video atau gambar, berita juga merupakan pilihan yang tepat untuk mencari tahu.</h2>
+              </div>
+
+              <div class="column is-half">
+                <img src="assets/image/ourNews.png" alt="">
               </div>
 
             </div>
@@ -327,8 +393,7 @@
     <section class="section hero">
       <div id=beritaContent>
       <div class="columns">
-          <!-- BERITA CARD COMPONENT -->        
-          
+          <!-- BERITA CARD COMPONENT --> 
             <div v-for="berita in news"> 
               <div class="column">
                 <div class="card">
@@ -401,46 +466,120 @@
           <div class="columns is-vcentered is-4">
   
             <div class="column is-half">
+              <img src="assets/image/ourLocation.png" alt="">
+            </div>
+
+            <div class="column is-half">
               <h1 class="title is-primary">LOKASI KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">
                 Lorem ipsum dolor sit, amet consectetur ad  ipisicing elit. Molestias suscipit ut dolor corrupti quisquam, repellat in!
               </h2>
             </div>
-  
-            <div class="column is-half">
-              <img src="assets/image/ourLocation.png" alt="">
-            </div>
+              
           </div>
         </div>
       </div>
     </section>
   </div>
   <section class="section hero ">
-    <div class="columns video-bpp is-fill is-centered is-mobile">
+    <div class="columns is-fill is-centered is-mobile">
       <!-- VIDEO YOUTUBE -->
       <div class="container">
         <div class="columns">
-          <div class="column is-two-thirds">
+          <div class="column is-full">
             <figure class="image">
               <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid"
-              width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              width="100%" height="650px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
             </figure>
-          </div>
-          <div class="column is-centered">
-            <h1 class="title is-2">Our Location</h1>
-            <br>
-            <br>
-            <p class="subtitle is-2">Lorem, ipsum:</p>
-            <p>Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ducimus? 
-              Provident quidem incidunt alias rem vel perferendis nisi.</p>
           </div>
         </div>      
     </div>
     </div>
   </section>
+
+  <div id="contact">
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
+
+            <div class="column is-half">
+              <h1 class="title is-primary">CONTACT US</h1>
+              <h2 class="title is-4  has-margin-top-50 has-text-justified">
+                Please Let us Know What You do Think!
+              </h2>
+              <div class="control has-icons-left">
+                <input type="email" placeholder="Email" class="input is-primary is-medium" required>
+                <span class="icon is-medium is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+              <hr>
+              <textarea class="textarea is-primary is-medium" placeholder="Write Something"></textarea>
+              <hr>
+              <button class="button is-block is-fullwidth is-primary is-medium">Send Message</button>
+            </div>
+            
+            <div class="column is-half">
+              <img src="assets/image/contactSection.png" alt="">
+            </div>
+            
+          </div>            
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <hr>
+  <section class="section hero">
+    <div class="card">
+      <div class="container">
+        <br>
+        <div class="has-text-centered">
+          <h1 class="title">KELOMPOK 9</h1>
+          <h2 class="subtitle is-4">We are the guys that made this whole thing possible</h2>
+        </div>
+        <br>
+        <br>
+        <div id="ourteam">
+          <div class="columns is-centered">
+            <div v-for="team in teams">
+              <div class="column">
+                <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">                                
+                    <img :src="team.thumbnail" alt="Placeholder image">                  
+                  </figure>    
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content has-text-centered">
+                      <p class="title is-4">{{team.nama}}</p>
+                    </div>
+                  </div>
+      
+                  <div class="content has-text-centered">
+                    <h3 class="subtitle is-6">{{team.quote}}</h3>
+                  </div>
+                  <div class="content-footer has-text-centered">
+                    <a href="#">#Kelompok9Ambyar</a><a href="#">#SAD</a>                  
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>   
+        <br>
+        <br>   
+        <br>  
+      </div>
+    </div>
+  </section>
+<hr>
 </body>
 
 <!--BODY SECTION OVER-->
@@ -451,14 +590,23 @@
     <div class="modal-content is-huge is-image">
       <img src="assets/image/bppgallery1.jpg" alt="">
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery2" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+    <div class="modal-content is-huge is-image">
+      <img src="assets/image/bppgallery2.jpg" alt="">
+    </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
 <!-- MODAL TARGET SECTION END -->
 
 <script src="assets/Javascript/index.js"></script>
+
 <!--FOOTER-->
 <iframe src="footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-<!--FOOTER SECTION OVER-->
-
+<!--FOOTER SECTION OVER--> 
 </html>
