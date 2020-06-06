@@ -30,4 +30,8 @@ html {
     width: 38rem;
   }
 }
+
+.is-clickable {
+  cursor: pointer;
+}
 /*# sourceMappingURL=new_style.css.map */
