@@ -54,9 +54,14 @@
             <a href="#home" class="navbar-item">Utama</a>
             <a href="#video" class="navbar-item">Video</a>
             <a href="#destinasi" class="navbar-item">Destinasi</a>
+            <a href="#hotelSection" class="navbar-item">Hotel</a>
             <a href="#gallery" class="navbar-item">Galeri</a>
             <a href="#news" class="navbar-item">Berita</a>
-            <a href="#contact" class="navbar-item">Contact</a>
+            <a href="#location" class="navbar-item">Lokasi</a>
+            <a href="#contact" class="navbar-item">Kontak</a>
+            <a href="#team" class="navbar-item">Team Kami</a>
+            <a href="#about" class="navbar-item">Tentang</a>
+
             <div class="navbar-item">
               <div class="buttons">
                 <a href="login.html" class="button is-primary">
@@ -127,13 +132,17 @@
       <div class="card">
         <div class="container">
           <div class="columns is-vcentered is-4">
-  
+
             <div class="column is-half">
               <h1 class="title is-primary">VIDEO KAMI</h1>
               <br>
-              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Dalam dunia pariwisata, visualisasi sangat dibutuhkan untuk mendapatkan sensasi keindahan sebuah kota ataupun daerah. Untuk itu, sebelum bepergian calon pariwisatawan dianjurkan untuk melihat suasana daerah pariwisata yang akan dikunjungi melewati media, terutama video. Dengan tujuan, akan mendapatkan gambaran visual yang tepat dan sesuai harapan. Keindahan alam Kota Balikpapan, terangkum dalam video dibawah ini.</h2>
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Dalam dunia pariwisata, visualisasi sangat
+                dibutuhkan untuk mendapatkan sensasi keindahan sebuah kota ataupun daerah. Untuk itu, sebelum bepergian
+                calon pariwisatawan dianjurkan untuk melihat suasana daerah pariwisata yang akan dikunjungi melewati
+                media, terutama video. Dengan tujuan, akan mendapatkan gambaran visual yang tepat dan sesuai harapan.
+                Keindahan alam Kota Balikpapan, terangkum dalam video dibawah ini.</h2>
             </div>
-  
+
             <div class="column is-half">
               <img src="assets/image/videosection.png" alt="">
             </div>
@@ -146,11 +155,11 @@
     <div class="columns is-fill is-centered is-mobile">
       <!-- VIDEO YOUTUBE -->
       <div class="column is-full">
-      <figure class="image">
-        <iframe src="https://www.youtube.com/embed/v441IXOTSUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+        <figure class="image">
+          <iframe src="https://www.youtube.com/embed/v441IXOTSUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
         picture-in-picture" width="100%" height="750px" allowfullscreen></iframe>
-      </figure>
-    </div>
+        </figure>
+      </div>
     </div>
   </div>
   <!-- VIDEO SECTION OVER -->
@@ -160,15 +169,18 @@
       <div class="card">
         <div class="container">
           <div class="columns is-vcentered is-4">
-            
+
             <div class="column is-half">
               <img src="assets/image/destinationsection.png" alt="">
             </div>
-            
+
             <div class="column is-half">
               <h1 class="title is-primary">DESTINASI KAMI</h1>
               <br>
-              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Setiap kota, tak hanya memiliki satu daerah yang dapat dituju oleh pariwisatawan melainkan, terdapat banyak destinasi yang memanjakan mata pariwisatawan. Begitu juga dengan Kota Balikpapan yang memiliki beberapa destinasi yang dapat dikunjungi oleh pariwisatawan.</h2>
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Setiap kota, tak hanya memiliki satu
+                daerah yang dapat dituju oleh pariwisatawan melainkan, terdapat banyak destinasi yang memanjakan mata
+                pariwisatawan. Begitu juga dengan Kota Balikpapan yang memiliki beberapa destinasi yang dapat dikunjungi
+                oleh pariwisatawan.</h2>
             </div>
           </div>
         </div>
@@ -179,42 +191,42 @@
       <!-- DESTINASI CARD COMPONENT -->
       <div id="destinasiCard">
         <div class="columns">
-        <div v-for="destinasi in destination">          
-          <div class="column">                  
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">                  
-                  <img v-bind:src="destinasi.thumbnail" alt="Placeholder image">                  
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">{{destinasi.title}}</p>
+          <div v-for="destinasi in destination">
+            <div class="column">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img v-bind:src="destinasi.thumbnail" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">{{destinasi.title}}</p>
+                    </div>
                   </div>
-                </div>
 
-                <div class="content">
-                  {{destinasi.isiDestinasi}}
-                  <a>@Balikpapan</a>.
-                  <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
-                  
-                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                  
-                </div>
-                <div class="content-footer">
-                  <a href="destinasi.html"><button class="button is-primary">
-                    Visit Review
-                  </button></a>
+                  <div class="content">
+                    {{destinasi.isiDestinasi}}
+                    <a>@Balikpapan</a>.
+                    <a href="#">#DestinasiBalikpapan</a> <a href="#">#responsive</a>
+
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+
+                  </div>
+                  <div class="content-footer">
+                    <a href="destinasi.html"><button class="button is-primary">
+                        Visit Review
+                      </button></a>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
 
         </div>
-
-        </div>
-      </div>      
+      </div>
     </section>
 
     <div class="container">
@@ -246,11 +258,12 @@
       <div class="card">
         <div class="container">
           <div class="columns is-vcentered is-4">
-            
+
             <div class="column is-half">
               <h1 class="title is-primary">HOTEL TERSEDIA</h1>
               <br>
-              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Berikut merupakan list dari hotel berbintang 5 yang ada di Balikpapan</h2>
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Berikut merupakan list dari hotel
+                berbintang 5 yang ada di Balikpapan</h2>
             </div>
 
             <div class="column is-half">
@@ -265,33 +278,34 @@
       <!-- DESTINASI CARD COMPONENT -->
       <div id="hotelCard">
         <div class="columns">
-        <div v-for="hotel in hotels">          
-          <div class="column">                  
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">                  
-                  <img v-bind:src="hotel.thumbnail" alt="Placeholder image">                  
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">{{hotel.title}}</p>
+          <div v-for="hotel in hotels">
+            <div class="column">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img v-bind:src="hotel.thumbnail" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">{{hotel.title}}</p>
+                    </div>
                   </div>
-                </div>
 
-                <div class="content">
-                  {{hotel.desc}}
-                  <a>@Balikpapan</a>.                                                    
-                  <img src="assets/image/rating.png" alt="">
+                  <div class="content">
+                    {{hotel.desc}}
+                    <a>@Balikpapan</a>.
+                    <img src="assets/image/rating.png" alt="">
+                  </div>
+                  <a href="hotel.html"><button class="button is-primary modal-button" data-target="modal-hotel">Learn
+                      More</button></a>
                 </div>
-                <a href="hotel.html"><button class="button is-primary modal-button" data-target="modal-hotel">Learn More</button></a>
               </div>
             </div>
           </div>
         </div>
-        </div>
-      </div>      
+      </div>
     </section>
 
     <div class="container">
@@ -323,7 +337,7 @@
       <div class="card">
         <div class="container">
           <div class="columns is-vcentered is-4">
-  
+
             <div class="column is-half">
               <img src="assets/image/gallerysection.png" alt="">
             </div>
@@ -331,131 +345,136 @@
             <div class="column is-half">
               <h1 class="title is-primary">GALERI KAMI</h1>
               <br>
-              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Foto tentang destinasi-destinasi yang akan dikunjungi, turut membantu men-visualisasikan suatu daerah pariwisata kepada pariwisatawan.</h2>
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Foto tentang destinasi-destinasi yang akan
+                dikunjungi, turut membantu men-visualisasikan suatu daerah pariwisata kepada pariwisatawan.</h2>
             </div>
-          
+
           </div>
         </div>
       </div>
     </section>
-    
+
     <section class="section hero">
-      <div class="columns is-1">        
+      <div class="columns is-1">
         <div class="column">
-          <img src="assets/image/bppgallery1.jpg" class="modal-button" data-target="modal-gallery">          
-          <img src="assets/image/bppgallery2.jpg">
-          <img src="assets/image/bppgallery3.jpg" width="100%">
-          <img src="assets/image/bppgallery4.jpeg">
-          <img src="assets/image/bppgallery5.jpg">
+          <img src="assets/image/bppgallery1.jpg" class="modal-button is-clickable" data-target="modal-gallery">
+          <img src=" assets/image/bppgallery2.jpg" class="modal-button is-clickable" data-target="modal-gallery2">
+          <img src="assets/image/bppgallery3.jpg" class="modal-button is-clickable" data-target="modal-gallery3"
+            width="100%">
+          <img src="assets/image/bppgallery4.jpeg" class="modal-button" data-target="modal-gallery4">
+
         </div>
         <div class="column">
-          <img src="assets/image/bppgallery3.jpg" width="100%">
-          <img src="assets/image/bppgallery2.jpg" class="modal-button" data-target="modal-gallery2">
-          <img src="assets/image/bppgallery1.jpg">
-          <img src="assets/image/bppgallery4.jpeg">
-          <img src="assets/image/bppgallery5.jpg">
+          <img src="assets/image/bppgallery6.jpg" class="modal-button is-clickable" data-target="modal-gallery6">
+          <img src="assets/image/bppgallery7.jpg" class="modal-button is-clickable" data-target="modal-gallery7">
+          <img src="assets/image/bppgallery8.jpg" class="modal-button is-clickable" data-target="modal-gallery8">
+          <img src="assets/image/bppgallery9.jpg" class="modal-button is-clickable" data-target="modal-gallery9">
+          <img src="assets/image/bppgallery10.jpg" class="modal-button is-clickable" data-target="modal-gallery10">
         </div>
         <div class="column">
-          <img src="assets/image/bppgallery5.jpg">
-          <img src="assets/image/bppgallery2.jpg">
-          <img src="assets/image/bppgallery3.jpg" width="100%">
-          <img src="assets/image/bppgallery4.jpeg">
-          <img src="assets/image/bppgallery1.jpg">
+          <img src="assets/image/bppgallery11.jpg" class="modal-button is-clickable" data-target="modal-gallery11">
+          <img src="assets/image/bppgallery12.jpg" class="modal-button is-clickable" data-target="modal-gallery12">
+          <img src="assets/image/bppgallery13.jpg" class="modal-button is-clickable" data-target="modal-gallery13">
+          <img src="assets/image/bppgallery14.jpg" class="modal-button is-clickable" data-target="modal-gallery14">
+          <img src="assets/image/bppgallery15.jpg" class="modal-button is-clickable" data-target="modal-gallery15">
+          <img src="assets/image/bppgallery5.jpg" class="modal-button is-clickable" data-target="modal-gallery5">
         </div>
       </div>
-      
+
     </section>
   </div>
-    <!-- GALLERY SECTION OVER -->
+  <!-- GALLERY SECTION OVER -->
 
-    <!--BERITA SECTION-->
-    <div id="news">
-      <section class="section hero">
-        <div class="card is-large ">
-          <div class="container">
-            <div class="columns is-vcentered is-4">                  
+  <!--BERITA SECTION-->
+  <div id="news">
+    <section class="section hero">
+      <div class="card is-large ">
+        <div class="container">
+          <div class="columns is-vcentered is-4">
 
-              <div class="column is-half">
+            <div class="column is-half">
               <h1 class="title is-primary">BERITA KAMI</h1>
               <br>
-              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Pengetahuan tentang daerah yang akan dikunjungi sangat perlu. Sehingga, selain melihat video atau gambar, berita juga merupakan pilihan yang tepat untuk mencari tahu.</h2>
-              </div>
-
-              <div class="column is-half">
-                <img src="assets/image/ourNews.png" alt="">
-              </div>
-
+              <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">Pengetahuan tentang daerah yang akan
+                dikunjungi sangat perlu. Sehingga, selain melihat video atau gambar, berita juga merupakan pilihan yang
+                tepat untuk mencari tahu.</h2>
             </div>
+
+            <div class="column is-half">
+              <img src="assets/image/ourNews.png" alt="">
+            </div>
+
           </div>
         </div>
-      </section>
-    </div>
-    <section class="section hero">
-      <div id=beritaContent>
+      </div>
+    </section>
+  </div>
+  <section class="section hero">
+    <div id=beritaContent>
       <div class="columns">
-          <!-- BERITA CARD COMPONENT --> 
-            <div v-for="berita in news"> 
-              <div class="column">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">                      
-                      <img v-bind:src="berita.thumbnail" alt="Placeholder image">
-                    </figure>
+        <!-- BERITA CARD COMPONENT -->
+        <div v-for="berita in news">
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img v-bind:src="berita.thumbnail" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{ berita.title }}</p>
                   </div>
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-content">
-                        <p class="title is-4">{{ berita.title }}</p>
-                      </div>
-                    </div>
-                          
-                    <div class="content">
-                      <p>{{berita.isiBerita}}</p>
-                      <br>
-                    <div class="tags">
-                      <span class="tag is-rounded is-primary">
-                        #pemkotBalikpapan
-                      </span>
-                      <span class="tag is-rounded is-primary">
-                        #beritaBalikpapan
-                      </span>
-                      <span class="tag is-rounded">
-                        {{berita.tanggal}}
-                      </span>
-                    </div>
-                    </div>
-                    <div class="content-footer">
-                      <a href="berita.html"><button class="button is-primary">
-                        Read More
-                      </button>
-                    </a>
-                    </div>
-                  </div>                  
+                </div>
+
+                <div class="content">
+                  <p>{{berita.isiBerita}}</p>
+                  <br>
+                  <div class="tags">
+                    <span class="tag is-rounded is-primary">
+                      #pemkotBalikpapan
+                    </span>
+                    <span class="tag is-rounded is-primary">
+                      #beritaBalikpapan
+                    </span>
+                    <span class="tag is-rounded">
+                      {{berita.tanggal}}
+                    </span>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <a href="berita.html"><button class="button is-primary">
+                      Read More
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
-             
+          </div>
         </div>
-      </div> 
+
+      </div>
+    </div>
 
   </section>
-    <div class="container">
-      <nav class="pagination" role="navigation" aria-label="pagination">
-        <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
-        <a class="pagination-next">Next page</a>
-        <ul class="pagination-list">
-          <li>
-            <a class="button is-primary" aria-label="Page 1" aria-current="page">1</a>
-          </li>
-          <li>
-            <a class="pagination-link" aria-label="Goto page 2">2</a>
-          </li>
-          <li>
-            <a class="pagination-link" aria-label="Goto page 3">3</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <div class="container">
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+      <a class="pagination-next">Next page</a>
+      <ul class="pagination-list">
+        <li>
+          <a class="button is-primary" aria-label="Page 1" aria-current="page">1</a>
+        </li>
+        <li>
+          <a class="pagination-link" aria-label="Goto page 2">2</a>
+        </li>
+        <li>
+          <a class="pagination-link" aria-label="Goto page 3">3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <hr>
   </div>
   <!-- BERITA SECTION OVER -->
@@ -464,7 +483,7 @@
       <div class="card">
         <div class="container">
           <div class="columns is-vcentered is-4">
-  
+
             <div class="column is-half">
               <img src="assets/image/ourLocation.png" alt="">
             </div>
@@ -473,10 +492,11 @@
               <h1 class="title is-primary">LOKASI KAMI</h1>
               <br>
               <h2 class="subtitle is-5  has-margin-top-50 has-text-justified">
-                Lorem ipsum dolor sit, amet consectetur ad  ipisicing elit. Molestias suscipit ut dolor corrupti quisquam, repellat in!
+                Lorem ipsum dolor sit, amet consectetur ad ipisicing elit. Molestias suscipit ut dolor corrupti
+                quisquam, repellat in!
               </h2>
             </div>
-              
+
           </div>
         </div>
       </div>
@@ -490,13 +510,13 @@
           <div class="column is-full">
             <figure class="image">
               <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid"
-              width="100%" height="650px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-              tabindex="0"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0141114578028!2d116.85934571475377!3d-1.15041039916087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0x8489d5309f45c0db!2sKalimantan%20Institute%20of%20Technology!5e0!3m2!1sen!2sid!4v1584542971150!5m2!1sen!2sid"
+                width="100%" height="650px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
             </figure>
           </div>
-        </div>      
-    </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -522,64 +542,66 @@
               <hr>
               <button class="button is-block is-fullwidth is-primary is-medium">Send Message</button>
             </div>
-            
+
             <div class="column is-half">
               <img src="assets/image/contactSection.png" alt="">
             </div>
-            
-          </div>            
+
+          </div>
         </div>
       </div>
     </section>
   </div>
 
-  <hr>
-  <section class="section hero">
-    <div class="card">
-      <div class="container">
-        <br>
-        <div class="has-text-centered">
-          <h1 class="title">KELOMPOK 9</h1>
-          <h2 class="subtitle is-4">We are the guys that made this whole thing possible</h2>
-        </div>
-        <br>
-        <br>
-        <div id="ourteam">
-          <div class="columns is-centered">
-            <div v-for="team in teams">
-              <div class="column">
-                <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">                                
-                    <img :src="team.thumbnail" alt="Placeholder image">                  
-                  </figure>    
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content has-text-centered">
-                      <p class="title is-4">{{team.nama}}</p>
+  <div id=team>
+    <hr>
+    <section class="section hero">
+      <div class="card">
+        <div class="container">
+          <br>
+          <div class="has-text-centered">
+            <h1 class="title">KELOMPOK 9</h1>
+            <h2 class="subtitle is-4">We are the guys that made this whole thing possible</h2>
+          </div>
+          <br>
+          <br>
+          <div id="ourteam">
+            <div class="columns is-centered">
+              <div v-for="team in teams">
+                <div class="column">
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img :src="team.thumbnail" alt="Placeholder image">
+                      </figure>
                     </div>
-                  </div>
-      
-                  <div class="content has-text-centered">
-                    <h3 class="subtitle is-6">{{team.quote}}</h3>
-                  </div>
-                  <div class="content-footer has-text-centered">
-                    <a href="#">#Kelompok9Ambyar</a><a href="#">#SAD</a>                  
-                  </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content has-text-centered">
+                          <p class="title is-4">{{team.nama}}</p>
+                        </div>
+                      </div>
+
+                      <div class="content has-text-centered">
+                        <h3 class="subtitle is-6">{{team.quote}}</h3>
+                      </div>
+                      <div class="content-footer has-text-centered">
+                        <a href="#">#Kelompok9Ambyar</a><a href="#">#SAD</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>          
-        </div>   
-        <br>
-        <br>   
-        <br>  
+          </div>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
-    </div>
-  </section>
-<hr>
+    </section>
+    <hr>
+  </div>
 </body>
 
 <!--BODY SECTION OVER-->
@@ -587,19 +609,124 @@
 <!-- MODAL TARGET SECTION -->
 <div id="modal-gallery" class="modal modal-fx-3dSlit">
   <div class="modal-background"></div>
-    <div class="modal-content is-huge is-image">
-      <img src="assets/image/bppgallery1.jpg" alt="">
-    </div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery1.jpg" alt="">
+  </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
 <div id="modal-gallery2" class="modal modal-fx-3dSlit">
   <div class="modal-background"></div>
-    <div class="modal-content is-huge is-image">
-      <img src="assets/image/bppgallery2.jpg" alt="">
-    </div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery2.jpg" alt="">
+  </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+
+<div id="modal-gallery3" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery3.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery4" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery4.jpeg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery5" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery5.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery6" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery6.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery7" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery7.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery8" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery8.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery9" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery9.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery10" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery10.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery11" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery11.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery12" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery12.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery13" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery13.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery14" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery14.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-gallery15" class="modal modal-fx-3dSlit">
+  <div class="modal-background"></div>
+  <div class="modal-content is-huge is-image">
+    <img src="assets/image/bppgallery15.jpg" alt="">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 
 <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
 <!-- MODAL TARGET SECTION END -->
@@ -607,6 +734,10 @@
 <script src="assets/Javascript/index.js"></script>
 
 <!--FOOTER-->
-<iframe src="footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-<!--FOOTER SECTION OVER--> 
+<div id="about">
+  <iframe src="footer.html"
+    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+</div>
+<!--FOOTER SECTION OVER-->
+
 </html>
